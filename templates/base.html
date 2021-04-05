@@ -7,7 +7,9 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>{% block title %}{% endblock %} | App Catalog</title>
     </head>
-        <body>
+    <body>
+        <!--  the stylesheet  -->
+        <link rel="stylesheet" href="{{url_for('static', filename='css/base.css')}}">
         <!--  icon  -->
         <link rel="shortcut icon" href="{{url_for('static', filename='images/favicon.ico')}}">
         <!--  importing bootstrap  -->
@@ -66,12 +68,11 @@
         {% block body %}
         <!--  body of the webpage  -->
         {% endblock %}
-        <link rel="stylesheet" href="{{url_for('static', filename='css/base.css')}}">
+        <!--  the footer of the webpage  -->
         <div class="footer">
-            <p style="a">Peter and Bekhruz Inc.</p>
-            <p style="a">2021</p>
-            <p style="b"><a>Home</a></p>
+            <p class="a">Peter and Bekhruz Inc.</p>
+            <p class="a">2021</p>
+            <p class="b"><a>Home</a></p>
         </div>
-        <img src="{{url_for('static', filename='images/favicon.ico')}}" alt="None">
     </body>
 </html>
