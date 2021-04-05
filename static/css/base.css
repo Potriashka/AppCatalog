@@ -2,3 +2,30 @@ html {
     font-size: 1.25em;
     background-color: #0f0f12;
 }
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 10%;
+    width: 100%;
+    background-color: #14171f;
+    color: #c4c1b9;
+    padding-top: 0.5%;
+}
+
+.a {
+    padding-left: 3%;
+    text-align: left;
+}
+
+.b {
+    text-align: center;
+}
+
+.img {
+    width: 3%;
+    height: 3%;
+    position: relative;
+    bottom: 3%;
+}
