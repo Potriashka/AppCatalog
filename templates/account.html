@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Register{% endblock %}
+{% block body %}
+    <center>
+        <br>
+        <h1>Your Account</h1>
+    </center>
+    <div id="contentDiv">
+        <br>
+        Your Username: <span id="usernameSpan"></span>
+        <br>
+        Your Publisher Name: <span id="nameSpan"></span>
+        <br>
+        <br>
+        <button onclick="signout();" class="btn btn-outline-danger">Sign Out</button>
+    </div>
+    <!--  the script  -->
+    <script src="{{url_for('static', filename='scripts/account.tsx')}}"></script>
+    <!--  the stylesheet  -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/account.css')}}">
+{% endblock %}
