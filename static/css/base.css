@@ -13,6 +13,10 @@ body {
     min-height: 100vh;
 }
 
+#appName {
+    cursor: pointer;
+}
+
 #footer {
     position: relative;
     bottom: 0;
@@ -29,7 +33,7 @@ body {
     margin-right: 1vw;
 }
 
-.b, .nav-link {
+.b, .nav-link, a {
     color: #c4c1b9;
     text-decoration: none;
     background-image: linear-gradient(currentColor, currentColor);

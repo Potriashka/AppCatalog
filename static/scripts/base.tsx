@@ -1,7 +1,7 @@
 let buttons = document.getElementById("buttons");
 let account = document.getElementById("account");
 
-if (window.sessionStorage.getItem("username") == null) {
+if (!checkCookie("username")) {
     buttons.style.display = "block";
     account.style.display = "none";
 } else {
@@ -19,6 +19,10 @@ document.getElementById("signinButton").onclick = () => {
 
 document.getElementById("registerButton").onclick = () => {
     window.location.replace("/register");
+}
+
+document.getElementById("appName").onclick = () => {
+    window.location.replace("/");
 }
 
 function setCookie(name, value, exdays) {
@@ -43,9 +47,9 @@ function getCookie(cname) {
     return "";
 }
 
-function checkCookie() {
-    let user = getCookie("username");
-    if (user != "") {
+function checkCookie(cookie) {
+    let c = getCookie(cookie);
+    if (c != "") {
         return true;
     } else {
         return false;
