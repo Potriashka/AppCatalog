@@ -1,12 +1,13 @@
-let username = window.sessionStorage.getItem("username");
-if (username == null) {
+let username = getCookie("username");
+if (!checkCookie(username)) {
     window.location.replace("/");
 }
 document.getElementById("usernameSpan").innerText = username;
-let publisherName = window.sessionStorage.getItem("name");
+let publisherName = getCookie("name");
 document.getElementById("nameSpan").innerText = publisherName;
 
 function signout() {
-    window.sessionStorage.clear();
+    setCookie("username", "", 100);
+    setCookie("name", "", 100);
     window.location.replace("/");
 }
