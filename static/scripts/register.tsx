@@ -28,8 +28,8 @@ function register() {
                             Name: name,
                             Password: password1
                         });
-                        window.sessionStorage.setItem("username", username);
-                        window.sessionStorage.setItem("name", name);
+                        setCookie("username", username, 100);
+                        setCookie("name", name, 100);
                         window.location.replace("/");
                         return;
                     } else {
