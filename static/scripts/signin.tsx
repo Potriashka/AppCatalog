@@ -23,8 +23,8 @@ function signin() {
                 alert("Username or password is incorrect. Try again");
             } else {
                 if (snapshot.val()["Password"] == password) {
-                    window.sessionStorage.setItem("username", username);
-                    window.sessionStorage.setItem("name", snapshot.val()["Name"]);
+                    setCookie("username", username, 100);
+                    setCookie("name", snapshot.val()["Name"], 100);
                     window.location.replace("/");
                 }
             }
