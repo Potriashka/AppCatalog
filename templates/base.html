@@ -72,11 +72,11 @@
         <!--  body of the webpage  -->
         {% endblock %}
         <!--  the footer of the webpage  -->
-        <img src="{{url_for('static', filename='images/favicon.ico')}}" alt="logo">
-        <span id="footer">
-            <p class="a">Peter and Bekhruz Inc.</p>
-            <p class="a">2021</p>
-            <p class="b"><a>Home</a></p>
-        </span>
+        <div id="footer">
+            <span class="a">Peter and Bekhruz Inc.</span>
+            <span class="a">2021</span>
+            <span class="b"><a class='b' href="/">Home</a></span>
+        </div>
+        <img src="{{url_for('static', filename='images/favicon.ico')}}" alt="logo" width="100" height="100">
     </body>
 </html>
