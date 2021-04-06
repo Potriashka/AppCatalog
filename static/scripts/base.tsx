@@ -8,3 +8,15 @@ if (window.sessionStorage.getItem("username") == null) {
     buttons.style.display = "none";
     account.style.display = "block";
 }
+
+document.getElementById("accountButton").onclick = () => {
+    window.location.replace("/account");
+}
+
+document.getElementById("signinButton").onclick = () => {
+    window.location.replace("/signin");
+}
+
+document.getElementById("registerButton").onclick = () => {
+    window.location.replace("/register");
+}
