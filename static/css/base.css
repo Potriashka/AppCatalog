@@ -7,10 +7,9 @@ body {
 }
 
 .footer {
-    position: fixed;
+    position: absolute;
     left: 0;
     bottom: 0;
-    height: 10%;
     width: 100%;
     background-color: #14171f;
     padding-top: 0.5%;
