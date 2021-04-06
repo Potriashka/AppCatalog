@@ -30,12 +30,17 @@ body {
 
 #footer span {
     width: 33.3vh;
+    text-align: right;
+}
+
+#footer span p {
+    text-align: left;
+}
+
+#footer #center {
     text-align: center;
 }
 
 a:hover {
     color: black !important;
-}
-
-.img {
 }
