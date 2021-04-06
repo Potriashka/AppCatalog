@@ -27,6 +27,8 @@ function register() {
                         Name: name,
                         Password: password1
                     });
+                    window.sessionStorage.setItem("username", username);
+                    window.sessionStorage.setItem("name", name);
                     window.location.replace("/");
                     return;
                 } else {
