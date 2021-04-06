@@ -8,3 +8,9 @@
     color: #ffffff;
     font-size: 1.1em;
 }
+
+#sth2 {
+    position: fixed;
+    top: 30%;
+    left: 33%;
+}
