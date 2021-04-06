@@ -8,6 +8,11 @@
         <title>{% block title %}{% endblock %} | App Catalog</title>
     </head>
     <body>
+        <!--  The core Firebase JS SDK is always required and must be listed first  -->
+        <script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.3.2/firebase-analytics.js"></script>
         <!--  the stylesheet  -->
         <link rel="stylesheet" href="{{url_for('static', filename='css/base.css')}}">
         <!--  icon  -->
