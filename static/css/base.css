@@ -1,40 +1,41 @@
 html {
     font-size: 1.25em;
 }
+
 body {
     background-color: #0f0f12 !important;
     color: #c4c1b9 !important;
 }
 
-#footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    height: 10%;
-    width: 100%;
-    background-color: #14171f;
-    padding-top: 0.5%;
+#page-container {
+    position: relative;
+    min-height: 100vh;
 }
 
-.a {
-    padding-left: 3%;
-    text-align: left;
+#footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #14171f;
+    padding: 2vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .b {
-    position: fixed;
-    bottom: 3%;
-    left: 48%;
     color: #c4c1b9;
     text-decoration: none;
 }
 
+#footer span {
+    width: 33.3vh;
+    text-align: center;
+}
+
 a:hover {
-    color: black;
+    color: black !important;
 }
 
 .img {
-    position: fixed;
-    right: 2%;
-    bottom: 1.25%;
 }
