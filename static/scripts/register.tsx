@@ -19,7 +19,7 @@ function register() {
     let password2 = document.getElementById("password2").value;
     if (username !== "" || name != "" || password1 != "" || password2 != "") {
         if (password1 === password2) {
-            firebase.database().ref("/").on("value", function (snapshot) {
+            firebase.database().ref("/").on("value", function(snapshot) {
                 if (snapshot.val()) {
                     if (snapshot.val()["user"][username] == undefined) {
                         done = true;
