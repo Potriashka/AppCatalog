@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Register{% endblock %}
+{% block body %}
+    <center>
+        <h1>Register</h1>
+        <input type="text" id="username">
+        <input type="text" id="name">
+        <input type="password" id="password">
+        <button onclick="register();"></button>
+    </center>
+    <script src="{{url_for('static', filename='scripts/register.tsx')}}"
+{% endblock %}
