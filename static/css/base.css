@@ -26,6 +26,12 @@ body {
 .b {
     color: #c4c1b9;
     text-decoration: none;
+
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
 }
 
 #footer span {
@@ -41,8 +47,9 @@ body {
     text-align: center;
 }
 
-a:hover {
-    color: black !important;
+a:hover, a:focus {
+    color: bisque !important;
+    background-size: 100% 2px;
 }
 
 ::-webkit-scrollbar {
