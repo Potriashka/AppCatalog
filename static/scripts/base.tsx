@@ -20,3 +20,7 @@ document.getElementById("signinButton").onclick = () => {
 document.getElementById("registerButton").onclick = () => {
     window.location.replace("/register");
 }
+
+document.getElementById("appName").onclick = () => {
+    window.location.replace("/");
+}
