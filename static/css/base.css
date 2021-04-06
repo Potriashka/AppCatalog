@@ -73,3 +73,7 @@ a:hover, a:focus {
 .short {
     width: 20vw !important;
 }
+
+#signinButton {
+    margin-right: 1vw;
+}
