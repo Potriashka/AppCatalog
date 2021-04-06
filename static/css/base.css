@@ -24,6 +24,11 @@ body {
     justify-content: space-between;
 }
 
+#bar {
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
 .b, .nav-link {
     color: #c4c1b9;
     text-decoration: none;
