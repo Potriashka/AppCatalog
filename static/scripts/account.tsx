@@ -1,6 +1,6 @@
 let username = getCookie("username");
-if (!checkCookie(username)) {
-    window.location.replace("/");
+if (!checkCookie("username")) {
+    // window.location.replace("/");
 }
 document.getElementById("usernameSpan").innerText = username;
 let publisherName = getCookie("name");
