@@ -17,7 +17,7 @@ function register() {
     let name = document.getElementById("name").value;
     let password1 = document.getElementById("password1").value;
     let password2 = document.getElementById("password2").value;
-    if (username !== "" && name != "" && password1 != "" && password2 != ""){
+    if (username !== "" || name != "" || password1 != "" || password2 != "") {
         if (password1 === password2) {
             firebase.database().ref("/").on("value", function (snapshot) {
                 if (snapshot.val()) {
