@@ -23,15 +23,14 @@ body {
     justify-content: space-between;
 }
 
-.b {
+.b, .nav-link {
     color: #c4c1b9;
     text-decoration: none;
-
     background-image: linear-gradient(currentColor, currentColor);
-    background-position: 0% 100%;
+    background-position: 0 100%;
     background-repeat: no-repeat;
-    background-size: 0% 2px;
-    transition: background-size .3s;
+    background-size: 0 2px;
+    transition: background-size .3s !important;
 }
 
 #footer span {
@@ -48,7 +47,7 @@ body {
 }
 
 a:hover, a:focus {
-    color: bisque !important;
+    color: darkgray !important;
     background-size: 100% 2px;
 }
 
