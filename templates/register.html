@@ -2,11 +2,18 @@
 {% block title %}Register{% endblock %}
 {% block body %}
     <center>
+        <br>
         <h1>Register</h1>
-        <input type="text" id="username">
-        <input type="text" id="name">
-        <input type="password" id="password">
-        <button onclick="register();"></button>
+        <br>
+        <input type="text" id="username" placeholder="Username" class="form-control short">
+        <br>
+        <input type="text" id="name" placeholder="Publisher Name" class="form-control short">
+        <br>
+        <input type="password" id="password1" placeholder="Password" class="form-control short">
+        <br>
+        <input type="password" id="password2" placeholder="Password (Again)" class="form-control short">
+        <br>
+        <button onclick="register();" class="btn btn-outline-success">Register</button>
     </center>
-    <script src="{{url_for('static', filename='scripts/register.tsx')}}"
+    <script src="{{url_for('static', filename='scripts/register.tsx')}}"></script>
 {% endblock %}
