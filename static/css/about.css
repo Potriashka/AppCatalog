@@ -9,8 +9,19 @@
     font-size: 1.1em;
 }
 
-#sth2 {
+#text {
     position: fixed;
-    top: 30%;
-    left: 33%;
+    width: 99vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    text-align: center;
+}
+.child {
+}
+
+.bold {
+    font-weight: bolder;
 }
