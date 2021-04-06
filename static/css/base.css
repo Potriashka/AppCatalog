@@ -6,8 +6,8 @@ body {
     color: #c4c1b9 !important;
 }
 
-.footer {
-    position: absolute;
+#footer {
+    position: fixed;
     left: 0;
     bottom: 0;
     height: 10%;
