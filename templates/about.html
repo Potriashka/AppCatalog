@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 {% block title %}About{% endblock %}
 {% block body %}
-    <p>I'm peter</p>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/about.css')}}">
+    <p class="main" >I'm peter</p>
+    <p class="main" >You can contact us <a href="https://github.com/Potriashka/AppCatalog/issues">here</a></p>
 {% endblock %}
