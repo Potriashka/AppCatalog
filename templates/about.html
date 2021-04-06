@@ -2,11 +2,17 @@
 {% block title %}About{% endblock %}
 {% block body %}
     <link rel="stylesheet" href="{{url_for('static', filename='css/about.css')}}">
-    <div id="sth2">
-        <p class="main"><a class="main" id="sth" href="/">App Catalog</a> is a web app where you<br>can share (upload/see/download) your<br>and others' projects.</p>
-        <p class="main">It was made by <a class="main" id="sth" href="https://github.com/Potriashka">Peter Repiev</a> with a large help of<br><a class="main" id="sth" href="https://github.com/BekhruzSNiyazov">Bekhruz Niyazov</a>
-             during the spring of 2021.</p>
-        <p class="main" >You can contact us <a class="main" id="sth" href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJqZhfdlqHNdSrsjkrJDFRcKZPpkpVlHwzWdFgDmmNHZNGvbZdDxDdgxlcGVrjJhSgjgbzL">here</a></p>
-        <p class="main">Source code is on (the) <a class="main" id="sth" href="https://github.com/Potriashka/AppCatalog">Github</a></p>
+    <div id="text">
+        <div id="child">
+            <p><a class="b bold" href="/">App Catalog</a> is a web app where you<br>can share (upload/see/download) your
+                <br>and others' projects.
+            </p>
+            <p>It was made by <a class="b bold" href="https://github.com/Potriashka">Peter Repiev</a> with a large help of<br>
+                <a class="b bold" href="https://github.com/BekhruzSNiyazov">Bekhruz Niyazov</a>
+                on the spring of 2021.</p>
+            <p>Contact  <a class="b bold" href="mailto:petrpotriashka2@gmail.com">Peter Repiev</a></p>
+            <p>Contact <a class="b bold" href="mailto:bekhruzsniyazov@outlook.com">Bekhruz Niyazov</a></p>
+            <p>Source code is on <a class="b bold" href="https://github.com/Potriashka/AppCatalog">Github</a></p>
+        </div>
     </div>
 {% endblock %}
