@@ -2,15 +2,6 @@
 {% block title %}About{% endblock %}
 {% block body %}
     <link rel="stylesheet" href="{{url_for('static', filename='css/about.css')}}">
-    <p class="main" >I'm peter</p>
-    <p class="main" >You can contact us <a href="https://github.com/Potriashka/AppCatalog/issues/new">here</a></p>
-
-    <input id="test" placeholder="test">
-    <button onclick="test1();">OK</button>
-
-    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
-
-    <script src="{{url_for('static', filename='scripts/about.tsx')}}"></script>
+    <p class="main"><a class="main" id="sth" href="/">App Catalog</a> is a web app where you<br>can share (upload/see/download) your<br>and others' projects.</p>
+    <p class="main" >You can contact us <a class="main" id="sth" href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJqZhfdlqHNdSrsjkrJDFRcKZPpkpVlHwzWdFgDmmNHZNGvbZdDxDdgxlcGVrjJhSgjgbzL">here</a></p>
 {% endblock %}
