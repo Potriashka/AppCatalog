@@ -7,5 +7,6 @@ You can find it <a target="_blank" href="https://ac2d0.herokuapp.com/">here</a>.
 # Contributors
 - [Peter Repiev](https://github.com/Potriashka) (his idea and implementation)
 - [Bekhruz Niyazov](https://github.com/BekhruzSNiyazov) (just polished a couple of things and helped in the process of development)
-# License
+# License & Credits
 This code is licensed with MIT license.
+Thanks to Jetbrains for providing free professional sowtware.
