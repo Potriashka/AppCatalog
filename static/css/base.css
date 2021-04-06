@@ -63,3 +63,7 @@ a:hover {
 ::-webkit-scrollbar-thumb:hover {
     background: #959595;
 }
+
+.short {
+    width: 20vw !important;
+}
