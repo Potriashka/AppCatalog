@@ -29,5 +29,9 @@ def register():
 def account():
     return render_template("account.html")
 
+@app.route("/publishers")
+def publishers():
+    return render_template("publishers.html")
+
 if __name__ == "__main__":
 	app.run(debug=True)
