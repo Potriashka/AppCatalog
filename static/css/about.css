@@ -25,3 +25,9 @@
 .bold {
     font-weight: bolder;
 }
+
+@media screen and (max-width: 1000px) {
+    #child {
+        font-size: medium;
+    }
+}
