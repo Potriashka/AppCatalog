@@ -17,21 +17,21 @@ let buttonsFooter = document.getElementsByClassName("buttonsFooter");
 let accountFooter = document.getElementsByClassName("accountFooter");
 
 if (!checkCookie("username")) {
-    buttons.style.display = "block";
+    buttons.style.display = "inline";
     account.style.display = "none";
 
     for (let i = 0; i < buttonsFooter.length; i++)
-        buttonsFooter[i].style.display = "block";
+        buttonsFooter[i].style.display = "inline";
     for (let i = 0; i < accountFooter.length; i++)
         accountFooter[i].style.display = "none";
 } else {
     buttons.style.display = "none";
-    account.style.display = "block";
+    account.style.display = "inline";
 
     for (let i = 0; i < buttonsFooter.length; i++)
         buttonsFooter[i].style.display = "none";
     for (let i = 0; i < accountFooter.length; i++)
-        accountFooter[i].style.display = "block";
+        accountFooter[i].style.display = "inline";
 }
 
 //try again
