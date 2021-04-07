@@ -1,4 +1,5 @@
 function register() {
+    document.getElementById("registerButton").innerHTML = "<i class=\"fa fa-spinner fa-spin\"></i> Register";
     let done = false;
     let username = document.getElementById("username").value;
     let name = document.getElementById("name").value;
