@@ -12,14 +12,12 @@
 #text {
     position: fixed;
     width: 99vw;
-    height: 60vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.5em;
     text-align: center;
-}
-.child {
 }
 
 .bold {
