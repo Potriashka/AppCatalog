@@ -70,8 +70,6 @@
                 </div>
             </div>
         </nav>
-        <!--  the base.tsx script  -->
-        <script src="{{url_for('static', filename='scripts/base.tsx')}}"></script>
         <div id="page-container">
             {% block body %}
             <!--  body of the webpage  -->
@@ -90,7 +88,7 @@
                 <span class="bar"> | </span>
                 <a class="b" href="/about" >About</a>
                 <span class="bar"> | </span>
-                <a href="/account" class="b accountFooter">Account</a>
+                <a href="/account" class="b" id="accountFooter">Account</a>
                 <a href="/signin" class="b buttonsFooter">Sign in</a>
                 <span class="bar buttonsFooter"> | </span>
                 <a href="/register" class="b buttonsFooter">Register</a>
@@ -99,5 +97,7 @@
                 <a href="/about" id="image"><img class="img" src="{{url_for('static', filename='images/favicon.ico')}}" alt="logo" width="75" height="75"></a>
             </span>
         </footer>
+        <!--  the base.tsx script  -->
+        <script src="{{url_for('static', filename='scripts/base.tsx')}}"></script>
     </body>
 </html>
