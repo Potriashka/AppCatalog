@@ -13,14 +13,28 @@ firebase.analytics();
 
 let buttons = document.getElementById("buttons");
 let account = document.getElementById("account");
+let buttonsFooter = document.getElementsByClassName("buttonsFooter");
+let accountFooter = document.getElementsByClassName("accountFooter");
 
 if (!checkCookie("username")) {
     buttons.style.display = "block";
     account.style.display = "none";
+
+    for (let i = 0; i < buttonsFooter.length; i++)
+        buttonsFooter[i].style.display = "block";
+    for (let i = 0; i < accountFooter.length; i++)
+        accountFooter[i].style.display = "none";
 } else {
     buttons.style.display = "none";
     account.style.display = "block";
+
+    for (let i = 0; i < buttonsFooter.length; i++)
+        buttonsFooter[i].style.display = "none";
+    for (let i = 0; i < accountFooter.length; i++)
+        accountFooter[i].style.display = "block";
 }
+
+//try again
 
 document.getElementById("accountButton").onclick = () => {
     window.location.replace("/account");
@@ -41,14 +55,14 @@ document.getElementById("appName").onclick = () => {
 function setCookie(name, value, exdays) {
     let d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-    let expires = "expires="+d.toUTCString();
+    let expires = "expires=" + d.toUTCString();
     document.cookie = name + "=" + value + ";" + expires + ";path=/";
 }
 
 function getCookie(cname) {
     let name = cname + "=";
     let ca = document.cookie.split(";");
-    for(let i = 0; i < ca.length; i++) {
+    for (let i = 0; i < ca.length; i++) {
         let c = ca[i];
         while (c.charAt(0) == " ") {
             c = c.substring(1);

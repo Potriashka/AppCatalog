@@ -70,11 +70,9 @@
                 </div>
             </div>
         </nav>
-        <!--  the script  -->
-        <script src="{{url_for('static', filename='scripts/base.tsx')}}"></script>
         <div id="page-container">
             {% block body %}
-            <!--  body of the webpage  -->
+                <!--  body of the webpage  -->
             {% endblock %}
         </div>
         <!--  the footer of the webpage  -->
@@ -85,14 +83,23 @@
             </span>
             <span id="center">
                 <a class="b" href="/">Home</a>
-                <span id="bar"> | </span>
+                <span class="bar"> | </span>
                 <a class="b" href="/publishers" >Publishers</a>
-                <span id="bar"> | </span>
+                <span class="bar"> | </span>
                 <a class="b" href="/about" >About</a>
+                <span class="bar"> | </span>
+                <a href="/account" class="b accountFooter">Account</a>
+                <span class="bar accountFooter"> | </span>
+                <a href="/signin" class="b buttonsFooter">Sign in</a>
+                <span class="bar buttonsFooter"> | </span>
+                <a href="/register" class="b buttonsFooter">Register</a>
+                </span>
             </span>
             <span>
                 <a href="/about" id="image"><img class="img" src="{{url_for('static', filename='images/favicon.ico')}}" alt="logo" width="75" height="75"></a>
             </span>
         </footer>
+        <!--  the script  -->
+        <script src="{{url_for('static', filename='scripts/base.tsx')}}"></script>
     </body>
 </html>

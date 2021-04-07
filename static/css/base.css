@@ -28,7 +28,7 @@ body {
     justify-content: space-between;
 }
 
-#bar {
+.bar {
     margin-left: 1vw;
     margin-right: 1vw;
 }
@@ -44,7 +44,7 @@ body {
 }
 
 #footer span {
-    width: 33.3vh;
+    width: 25vw;
     text-align: right;
 }
 
@@ -54,6 +54,7 @@ body {
 
 #footer #center {
     text-align: center;
+    width: 50vw;
 }
 
 a:hover, a:focus {
