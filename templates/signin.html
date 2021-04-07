@@ -2,6 +2,7 @@
 {% block title %}Sign in{% endblock %}
 {% block body %}
     <center>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <br>
         <h1>Sign in</h1>
         <br>
@@ -9,7 +10,7 @@
         <br>
         <input type="password" id="password" placeholder="Password" class="form-control short">
         <br>
-        <button onclick="signin();" class="btn btn-outline-success">Sign in</button>
+        <button onclick="signin();" class="btn btn-outline-success" id="buttonSignIn">Sign in</button>
     </center>
     <script src="{{url_for('static', filename='scripts/signin.tsx')}}"></script>
 {% endblock %}
