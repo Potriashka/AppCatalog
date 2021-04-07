@@ -8,6 +8,8 @@
         <title>{% block title %}{% endblock %} | App Catalog</title>
     </head>
     <body>
+        <!--  the script  -->
+        <script src="{{url_for('static', filename='scripts/base.tsx')}}"></script>
         <!--  importing the Ubuntu font  -->
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
         <!--  The core Firebase JS SDK is always required and must be listed first  -->
@@ -98,7 +100,5 @@
                 <a href="/about" id="image"><img class="img" src="{{url_for('static', filename='images/favicon.ico')}}" alt="logo" width="75" height="75"></a>
             </span>
         </footer>
-        <!--  the script  -->
-        <script src="{{url_for('static', filename='scripts/base.tsx')}}"></script>
     </body>
 </html>
