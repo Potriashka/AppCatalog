@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Publishers{% endblock %}
+{% block body %}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/publishers.css')}}">
+    <center>
+        <br>
+        <h1>Publishers</h1>
+    </center>
+    <div id="publishers"></div>
+    <script src="{{url_for('static', filename='scripts/publishers.tsx')}}"></script>
+{% endblock %}
