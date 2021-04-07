@@ -32,8 +32,6 @@ if (!checkCookie("username")) {
     accountFooter.style.display = "inline";
 }
 
-//try again
-
 document.getElementById("accountButton").onclick = () => {
     window.location.replace("/account");
 }
