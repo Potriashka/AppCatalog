@@ -111,16 +111,10 @@ a:hover, a:focus {
 
 .text1 {
     color: white;
-    font-size: 60px;
+    font-size: 2em;
     font-weight: 700;
     letter-spacing: 8px;
     position: relative;
-    animation: text 3s 1;
-}
-
-.text2 {
-    font-size: 30px;
-    color: #6ab04c;
     animation: text 3s 1;
 }
 
