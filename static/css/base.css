@@ -88,8 +88,8 @@ a:hover, a:focus {
     margin-right: 1vw;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .short {
-        width: 90vw !important;
+        width: 80vw !important;
     }
 }
