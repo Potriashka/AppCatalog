@@ -93,4 +93,7 @@ a:hover, a:focus {
     .short {
         width: 80vw !important;
     }
+    #center {
+        display: none;
+    }
 }
