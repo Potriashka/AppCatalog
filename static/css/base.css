@@ -87,3 +87,9 @@ a:hover, a:focus {
 #signinButton {
     margin-right: 1vw;
 }
+
+@media screen and (max-width: 800px) {
+    .short {
+        width: 90vw !important;
+    }
+}
