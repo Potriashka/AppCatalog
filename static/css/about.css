@@ -26,7 +26,7 @@
     font-weight: bolder;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
     #child {
         font-size: medium;
     }
