@@ -8,15 +8,13 @@
         <title>{% block title %}{% endblock %} | App Catalog</title>
     </head>
     <body>
-        <!--  the script  -->
-        <script src="{{url_for('static', filename='scripts/base.tsx')}}"></script>
-        <!--  importing the Ubuntu font  -->
-        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
         <!--  The core Firebase JS SDK is always required and must be listed first  -->
         <script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
         <script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
         <script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
         <script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.3.2/firebase-analytics.js"></script>
+        <!--  importing the Ubuntu font  -->
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
         <!--  the stylesheet  -->
         <link rel="stylesheet" href="{{url_for('static', filename='css/base.css')}}">
         <!--  icon  -->
@@ -72,9 +70,11 @@
                 </div>
             </div>
         </nav>
+        <!--  the base.tsx script  -->
+        <script src="{{url_for('static', filename='scripts/base.tsx')}}"></script>
         <div id="page-container">
             {% block body %}
-                <!--  body of the webpage  -->
+            <!--  body of the webpage  -->
             {% endblock %}
         </div>
         <!--  the footer of the webpage  -->
@@ -94,7 +94,6 @@
                 <a href="/signin" class="b buttonsFooter">Sign in</a>
                 <span class="bar buttonsFooter"> | </span>
                 <a href="/register" class="b buttonsFooter">Register</a>
-                </span>
             </span>
             <span>
                 <a href="/about" id="image"><img class="img" src="{{url_for('static', filename='images/favicon.ico')}}" alt="logo" width="75" height="75"></a>
