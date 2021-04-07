@@ -14,7 +14,7 @@ firebase.analytics();
 let buttons = document.getElementById("buttons");
 let account = document.getElementById("account");
 let buttonsFooter = document.getElementsByClassName("buttonsFooter");
-let accountFooter = document.getElementsByClassName("accountFooter");
+let accountFooter = document.getElementById("accountFooter");
 
 if (!checkCookie("username")) {
     buttons.style.display = "inline";
@@ -22,16 +22,14 @@ if (!checkCookie("username")) {
 
     for (let i = 0; i < buttonsFooter.length; i++)
         buttonsFooter[i].style.display = "inline";
-    for (let i = 0; i < accountFooter.length; i++)
-        accountFooter[i].style.display = "none";
+    accountFooter.style.display = "none";
 } else {
     buttons.style.display = "none";
     account.style.display = "inline";
 
     for (let i = 0; i < buttonsFooter.length; i++)
         buttonsFooter[i].style.display = "none";
-    for (let i = 0; i < accountFooter.length; i++)
-        accountFooter[i].style.display = "inline";
+    accountFooter.style.display = "inline";
 }
 
 //try again
