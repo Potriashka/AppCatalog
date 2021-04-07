@@ -1,4 +1,4 @@
-let container = document.getElementById("publishers");
+let publisherContainer = document.getElementById("publishers");
 
 firebase.database().ref("/").on("value", function(snapshot) {
     if (snapshot.val()) {
@@ -7,8 +7,8 @@ firebase.database().ref("/").on("value", function(snapshot) {
         {
             publishers += `${snapshot.val()["user"][username]["Name"]}<br>`;
         }
-        container.innerHTML = publishers;
+        publisherContainer.innerHTML = publishers;
     } else {
-        container.innerHTML = "<h2>There are no publishers yet</h2>"
+        publisherContainer.innerHTML = "<h2>There are no publishers yet</h2>"
     }
 });

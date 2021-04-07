@@ -18,7 +18,7 @@
         <button onclick="signout();" class="btn btn-outline-danger">Sign Out</button>
     </div>
     <!--  the script  -->
-    <script src="{{url_for('static', filename='scripts/account.tsx')}}"></script>
+    <!--  {% block script %}<script src="{{url_for('static', filename='scripts/account.tsx')}}"></script>{% endblock %}  -->
     <!--  the stylesheet  -->
     <link rel="stylesheet" href="{{url_for('static', filename='css/account.css')}}">
 {% endblock %}

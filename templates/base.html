@@ -99,5 +99,6 @@
         </footer>
         <!--  the base.tsx script  -->
         <script src="{{url_for('static', filename='scripts/base.tsx')}}"></script>
+        {% block script %}{% endblock %}
     </body>
 </html>
