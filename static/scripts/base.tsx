@@ -72,9 +72,5 @@ function getCookie(cname) {
 
 function checkCookie(cookie) {
     let c = getCookie(cookie);
-    if (c != "") {
-        return true;
-    } else {
-        return false;
-    }
+    return c != "";
 }
