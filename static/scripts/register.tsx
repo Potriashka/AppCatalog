@@ -1,5 +1,6 @@
 function register() {
-    document.getElementById("buttonRegister").innerHTML = "<i class=\"fa fa-spinner fa-spin\"></i> Register";
+    let button = document.getElementById("buttonRegister");
+    button.innerHTML = "<i class=\"fa fa-spinner fa-spin\"></i> Register";
     let done = false;
     let username = document.getElementById("username").value;
     let name = document.getElementById("name").value;
@@ -22,6 +23,7 @@ function register() {
                         return;
                     } else {
                         if (!done) {
+                            button.innerHTML = "Register";
                             alert("A user with that username already exists! Try a different username.")
                             document.getElementById("username").value = "";
                         }
@@ -29,9 +31,11 @@ function register() {
                 }
             });
         } else {
+            button.innerHTML = "Register";
             alert("Passwords do not match! Please, try again.");
         }
     } else {
+        button.innerHTML = "Register";
         alert("You should fill in all input fields!");
     }
 }
