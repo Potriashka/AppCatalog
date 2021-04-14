@@ -61,18 +61,74 @@
 
                     </div>
                     <div id="account">
-                        <button class="btn btn-outline-success" type="submit" id="accountButton">Account</button>
+                        <button class="btn btn-outline-primary" type="submit" id="show" id="accountButton">Account</button>
                     </div>
                     <div id="buttons">
-                        <button class="btn btn-outline-success" type="submit" id="signinButton">Sign in</button>
-                        <button class="btn btn-outline-success" type="submit" id="registerButton">Register</button>
+                        <button class="btn btn-outline-primary" type="submit" id="show" id="signinButton">Sign in</button>
+                        <button class="btn btn-outline-primary" type="submit" id="show" id="registerButton">Register</button>
                     </div>
                 </div>
             </div>
         </nav>
+        <dialog id="d">
+            <br>
+            <div class="container">
+                <h1 class="text1" id="j" >Your account</h1>
+            </div>
+            <div id="contentDiv">
+                <br>
+                Your Username: <span id="usernameSpan"></span>
+                <br>
+                Your Publisher Name: <span id="nameSpan"></span>
+                <br>
+                <br>
+                <button onclick="signout();" class="btn btn-outline-danger">Sign Out</button>
+            </div>
+            <button class="btn btn-secondary btn-sm" id="close">Close</button>
+        </dialog>
+        <dialog id="d1">
+            <br>
+            <div class="container">
+                <h1 class="text1" id="j1" >Sign In</h1>
+            </div>
+            <div id="contentDiv1">
+                <br>
+                <input type="text" id="username" placeholder="Username" class="form-control short">
+                <br>
+                <input type="password" id="password" placeholder="Password" class="form-control short">
+                <br>
+                <button onclick="signin();" class="btn btn-outline-success" id="buttonSignIn">Sign in</button>
+            </div>
+            <button class="btn btn-secondary btn-sm" id="close1">Close</button>
+        </dialog>
+        <dialog id="d2">
+            <br>
+            <div class="container">
+                <h1 class="text1" id="j2" >Register</h1>
+            </div>
+            <div id="contentDiv2">
+                <br>
+                <input type="text" id="username" placeholder="Username" class="form-control short">
+                <br>
+                <input type="text" id="name" placeholder="Publisher Name" class="form-control short">
+                <br>
+                <input type="password" id="password1" placeholder="Password" class="form-control short">
+                <br>
+                <input type="password" id="password2" placeholder="Password (Again)" class="form-control short">
+                <br>
+                <button onclick="register();" class="btn btn-outline-success" id="buttonRegister">Register</button>
+            </div>
+            <button class="btn btn-secondary btn-sm" id="close2">Close</button>
+        </dialog>
+        <!--  the script  -->
+        {% block script %}
+        <script src="{{url_for('static', filename='scripts/account.tsx')}}"></script>
+        <script src="{{url_for('static', filename='scripts/signin.tsx')}}"></script>
+        <script src="{{url_for('static', filename='scripts/register.tsx')}}"></script>
+        {% endblock %}
         <div id="page-container">
             {% block body %}
-            <!--  body of the webpage  -->
+                <!--  body of the webpage  -->
             {% endblock %}
         </div>
         <!--  the footer of the webpage  -->
@@ -97,8 +153,16 @@
                 <a href="/about" id="image"><img class="img" src="{{url_for('static', filename='images/favicon.ico')}}" alt="logo" width="75" height="75"></a>
             </span>
         </footer>
-        <!--  the base.tsx script  -->
+        <!--  the base.tsx and another script  -->
         <script src="{{url_for('static', filename='scripts/base.tsx')}}"></script>
-        {% block script %}{% endblock %}
+        <script type = text/javascript>
+            var dialog = document.querySelector('dialog');
+            document.querySelector('#show').onclick = function() {
+                dialog.show();
+            };
+            document.querySelector('#close').onclick = function() {
+                dialog.close();
+            };
+        </script>
     </body>
 </html>

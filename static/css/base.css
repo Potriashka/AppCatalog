@@ -130,3 +130,81 @@ a:hover, a:focus {
         letter-spacing: 8px;
     }
 }
+
+dialog {
+    z-index: 2;
+    position: absolute;
+    left: 74%;
+    height: 100%;
+    width: 25%;
+    background-color: #232c33;
+    animation: dialog .5s 1;
+}
+
+dialog #contentDiv {
+    color: #c4c1b9 !important;
+}
+
+#d #close {
+    position: relative;
+    top: 30%;
+    left: 40%;
+}
+
+#j {
+    position: relative;
+}
+
+dialog1 {
+    z-index: 2;
+    position: absolute;
+    left: 74%;
+    height: 100%;
+    width: 25%;
+    background-color: #232c33;
+    animation: dialog .5s 1;
+}
+
+dialog1 #contentDiv1 {
+    color: #c4c1b9 !important;
+}
+
+#d1 #close1 {
+    position: relative;
+    top: 30%;
+    left: 40%;
+}
+
+#j1 {
+    position: relative;
+}
+
+dialog2 {
+    z-index: 2;
+    position: absolute;
+    left: 74%;
+    height: 100%;
+    width: 25%;
+    background-color: #232c33;
+    animation: dialog .5s 1;
+}
+
+dialog2 #contentDiv2 {
+    color: #c4c1b9 !important;
+}
+
+#d2 #close2 {
+    position: relative;
+    top: 30%;
+    left: 40%;
+}
+
+#j2 {
+    position: relative;
+}
+
+@keyframes dialog {
+    0% {
+        opacity: 0.2;
+    }
+}
