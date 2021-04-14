@@ -64,8 +64,8 @@
                         <button class="btn btn-outline-primary" type="submit" id="show" id="accountButton">Account</button>
                     </div>
                     <div id="buttons">
-                        <button class="btn btn-outline-primary" type="submit" id="show" id="signinButton">Sign in</button>
-                        <button class="btn btn-outline-primary" type="submit" id="show" id="registerButton">Register</button>
+                        <button class="btn btn-outline-primary" type="submit" id="show1">Sign in</button>
+                        <button class="btn btn-outline-primary" type="submit" id="show2">Register</button>
                     </div>
                 </div>
             </div>
@@ -122,6 +122,34 @@
         </dialog>
         <!--  the script  -->
         {% block script %}
+        <script type = text/javascript>
+            var dialog = document.querySelector('dialog');
+            document.querySelector('#show').onclick = function() {
+                dialog.show();
+            };
+            document.querySelector('#close').onclick = function() {
+                dialog.close();
+            };
+        </script>
+        <script  type = text/javascript>
+            var dialog = document.querySelector('dialog1');
+            document.querySelector('#show1').onclick = function() {
+                dialog.show();
+            };
+            document.querySelector('#close1').onclick = function() {
+                dialog.close();
+            };
+        </script>
+        <script  type = text/javascript>
+            var dialog = document.querySelector('dialog2');
+            document.querySelector('#show2').onclick = function() {
+                dialog.show();
+            };
+            document.querySelector('#close2').onclick = function() {
+                dialog.close();
+            };
+        </script>
+        </script>
         <script src="{{url_for('static', filename='scripts/account.tsx')}}"></script>
         <script src="{{url_for('static', filename='scripts/signin.tsx')}}"></script>
         <script src="{{url_for('static', filename='scripts/register.tsx')}}"></script>
