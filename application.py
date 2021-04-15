@@ -17,14 +17,6 @@ def icon():
 def about():
     return render_template("about.html")
 
-@app.route("/signin")
-def signin():
-    return render_template("signin.html")
-
-@app.route("/register")
-def register():
-    return render_template("register.html")
-
 @app.route("/account")
 def account():
     return render_template("account.html")
