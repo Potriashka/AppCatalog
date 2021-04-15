@@ -89,15 +89,6 @@ a:hover, a:focus {
     margin-right: 1vw;
 }
 
-@media screen and (max-width: 1000px) {
-    .short {
-        width: 80vw !important;
-    }
-    #center {
-        display: none;
-    }
-}
-
 .container {
     text-align: center;
     margin-top: 5vh;
@@ -118,6 +109,40 @@ a:hover, a:focus {
     animation: text 3s 1;
 }
 
+dialog {
+    z-index: 2;
+    position: absolute;
+    left: 69vw;
+    height: 100vh;
+    width: 30vw;
+    background-color: #232c33;
+    animation: dialog .5s 1;
+}
+
+.header {
+    position: relative;
+}
+
+.close {
+    border-radius: 20px !important;
+    height: 30px;
+    width: 30px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.close-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@keyframes dialog {
+    0% {
+        opacity: 0.2;
+    }
+}
+
 @keyframes text {
     0% {
         top: 50%;
@@ -131,80 +156,13 @@ a:hover, a:focus {
     }
 }
 
-dialog {
-    z-index: 2;
-    position: absolute;
-    left: 74%;
-    height: 100%;
-    width: 25%;
-    background-color: #232c33;
-    animation: dialog .5s 1;
-}
 
-dialog #contentDiv {
-    color: #c4c1b9 !important;
-}
+@media screen and (max-width: 1000px) {
+    .short {
+        width: 80vw !important;
+    }
 
-#d #close {
-    position: relative;
-    top: 30%;
-    left: 40%;
-}
-
-#j {
-    position: relative;
-}
-
-dialog1 {
-    z-index: 2;
-    position: absolute;
-    left: 74%;
-    height: 100%;
-    width: 25%;
-    background-color: #232c33;
-    animation: dialog .5s 1;
-}
-
-dialog1 #contentDiv1 {
-    color: #c4c1b9 !important;
-}
-
-#d1 #close1 {
-    position: relative;
-    top: 30%;
-    left: 40%;
-}
-
-#j1 {
-    position: relative;
-}
-
-dialog2 {
-    z-index: 2;
-    position: absolute;
-    left: 74%;
-    height: 100%;
-    width: 25%;
-    background-color: #232c33;
-    animation: dialog .5s 1;
-}
-
-dialog2 #contentDiv2 {
-    color: #c4c1b9 !important;
-}
-
-#d2 #close2 {
-    position: relative;
-    top: 30%;
-    left: 40%;
-}
-
-#j2 {
-    position: relative;
-}
-
-@keyframes dialog {
-    0% {
-        opacity: 0.2;
+    #center {
+        display: none;
     }
 }
