@@ -113,7 +113,7 @@ dialog {
     z-index: 2;
     position: absolute;
     left: 69vw;
-    height: 100vh;
+    height: 100%;
     width: 30vw;
     background-color: #232c33;
     animation: dialog .5s 1;

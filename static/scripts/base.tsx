@@ -46,7 +46,7 @@ let registerDialog = document.getElementById("registerDialog");
 let signinOpen = false;
 let registerOpen = false;
 
-document.getElementById("signinButton").onclick = () => {
+let openSignInDialog = () => {
     signinDialog.style.display = "block";
     if (registerOpen) {
         registerDialog.style.display = "none";
@@ -55,7 +55,7 @@ document.getElementById("signinButton").onclick = () => {
     signinOpen = true;
 }
 
-document.getElementById("registerButton").onclick = () => {
+let openRegisterDialog = () => {
     registerDialog.style.display = "block";
     if (signinOpen) {
         signinDialog.style.display = "none";
@@ -63,6 +63,11 @@ document.getElementById("registerButton").onclick = () => {
     }
     registerOpen = true;
 }
+
+document.getElementById("signinButton").onclick = openSignInDialog;
+document.getElementById("signinLink").onclick = openSignInDialog;
+document.getElementById("registerButton").onclick = openRegisterDialog;
+document.getElementById("registerLink").onclick = openRegisterDialog;
 
 let closeDialog = () => {
     if (signinOpen) {
@@ -74,7 +79,6 @@ let closeDialog = () => {
         registerOpen = false;
     }
 }
-
 
 function setCookie(name, value, exdays) {
     let d = new Date();
