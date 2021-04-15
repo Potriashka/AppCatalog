@@ -36,17 +36,45 @@ document.getElementById("accountButton").onclick = () => {
     window.location.replace("/account");
 }
 
-document.getElementById("signinButton").onclick = () => {
-    window.location.replace("/signin");
-}
-
-document.getElementById("registerButton").onclick = () => {
-    window.location.replace("/register");
-}
-
 document.getElementById("appName").onclick = () => {
     window.location.replace("/");
 }
+
+let signinDialog = document.getElementById("signinDialog");
+let registerDialog = document.getElementById("registerDialog");
+
+let signinOpen = false;
+let registerOpen = false;
+
+document.getElementById("signinButton").onclick = () => {
+    signinDialog.style.display = "block";
+    if (registerOpen) {
+        registerDialog.style.display = "none";
+        registerOpen = false;
+    }
+    signinOpen = true;
+}
+
+document.getElementById("registerButton").onclick = () => {
+    registerDialog.style.display = "block";
+    if (signinOpen) {
+        signinDialog.style.display = "none";
+        signinOpen = false;
+    }
+    registerOpen = true;
+}
+
+let closeDialog = () => {
+    if (signinOpen) {
+        signinDialog.style.display = "none";
+        signinOpen = false;
+    }
+    if (registerOpen) {
+        registerDialog.style.display = "none";
+        registerOpen = false;
+    }
+}
+
 
 function setCookie(name, value, exdays) {
     let d = new Date();
@@ -74,11 +102,3 @@ function checkCookie(cookie) {
     let c = getCookie(cookie);
     return c != "";
 }
-
-var dialog = document.querySelector('dialog');
-document.querySelector('#show').onclick = function() {
-    dialog.show();
-};
-document.querySelector('#close').onclick = function() {
-    dialog.close();
-};
