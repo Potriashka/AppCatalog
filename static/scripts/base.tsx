@@ -46,7 +46,7 @@ let registerDialog = document.getElementById("registerDialog");
 let signinOpen = false;
 let registerOpen = false;
 
-document.getElementById("signinButton").onclick = () => {
+document.getElementsByClassName("signinButton").onclick = () => {
     signinDialog.style.display = "block";
     if (registerOpen) {
         registerDialog.style.display = "none";
