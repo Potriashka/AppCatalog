@@ -2,7 +2,7 @@ function register() {
     let button = document.getElementById("buttonRegister");
     button.innerHTML = "<i class=\"fa fa-spinner fa-spin\"></i> Register";
     let done = false;
-    let username = document.getElementById("username").value;
+    let username = document.getElementById("usernameRegister").value;
     let name = document.getElementById("name").value;
     let password1 = document.getElementById("password1").value;
     let password2 = document.getElementById("password2").value;
