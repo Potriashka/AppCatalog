@@ -1,1 +1,33 @@
+.k {
+    font-size: 30px;
+}
 
+#CHim {
+    position: relative;
+    left: 20%;
+}
+
+#ENem {
+    position: relative;
+    left: 60%;
+}
+
+#fileChooser {
+    position: relative;
+    left: 20%;
+    border-style: solid;
+    width: 15%;
+    border-radius: 10%;
+    border-color: #3dd9a2;
+}
+
+input {
+    opacity: inherit;
+}
+
+#exampleFormControlInput1 {
+    position: relative;
+    top: 15%;
+    left: 60%;
+    width: 20%;
+}
