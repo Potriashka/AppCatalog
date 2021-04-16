@@ -9,13 +9,13 @@ body {
 }
 
 .btn-outline-success {
-    color: #29957c !important;
+    color: #58eac3 !important;
     background-color: transparent !important;
-    border-color: #29957c !important;
+    border-color: #58eac3 !important;
 }
 
 .btn-outline-success:hover {
-    background-color: #29957c !important;
+    background-color: #58eac3 !important;
     color: white !important;
 }
 
