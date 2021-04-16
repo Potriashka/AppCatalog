@@ -16,11 +16,15 @@ body {
 
 .btn-outline-success:hover {
     background-color: #58eac3 !important;
-    color: white !important;
+    color: black !important;
 }
 
 .btn-outline-success:focus {
     box-shadow: 0 0 0 0.25rem #207155 !important;
+}
+
+.btn-outline-info {
+    color: aqua;
 }
 
 #page-container {
