@@ -141,10 +141,10 @@
             </span>
         </footer>
         <!--  the base.tsx and another script  -->
-        <script src="{{url_for('static', filename='scripts/base.tsx')}}"></script>
-        <script src="{{url_for('static', filename='scripts/signin.tsx')}}"></script>
-        <script src="{{url_for('static', filename='scripts/register.tsx')}}"></script>
+        <script src="{{url_for('static', filename='scripts/base.ts')}}"></script>
+        <script src="{{url_for('static', filename='scripts/signin.ts')}}"></script>
+        <script src="{{url_for('static', filename='scripts/register.ts')}}"></script>
         <!--  the script  -->
-        {% block script %}{% endblock %}
+        <script src="{{url_for('static', filename='scripts/{% block script %}{% endblock %}.ts')}}"></script>
     </body>
 </html>
