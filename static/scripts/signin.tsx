@@ -1,6 +1,6 @@
 function signin() {
     let button = document.getElementById("buttonSignIn");
-    button.innerHTML = "<i class=\"fa fa-spinner fa-spin\"></i> Sign in";
+    button.innerHTML = "<i class=\"fa fa-spinner fa-spin\"></i> Sign In";
     let username = document.getElementById("usernameSignin").value;
     let password = document.getElementById("password").value;
 
