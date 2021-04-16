@@ -18,7 +18,7 @@ function signin() {
                     setCookie("name", snapshot.val()["Name"], 100);
                     window.location.replace("/");
                 } else {
-                    button.innerHTML = "Sign in";
+                    button.innerHTML = "Sign In";
                     alert("Username or password is incorrect. Try again.");
                 }
             }
