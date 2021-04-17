@@ -214,11 +214,3 @@ dialog {
         width: 100vw !important;
     }
 }
-
-@keyframes close {
-    0% {
-        width: 10%;
-        height: 10%;
-        opacity: 1;
-    }
-}

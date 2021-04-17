@@ -73,15 +73,17 @@ document.getElementById("signinLink").onclick = openSignInDialog;
 document.getElementById("registerButton").onclick = openRegisterDialog;
 document.getElementById("registerLink").onclick = openRegisterDialog;
 
-let closeDialog = () => {
+let closeDialog = async () => {
+    let keyframe = [{ opacity: "0.2", left: "90vw" }]
     if (signinOpen) {
-        signinDialog.animate([
-            { width: "0%" }, { height: "0%" }, { opacity: "0" }
-        ], { duration: 1000, iterations: 1 })
-        // signinDialog.style.display = "none";
+        signinDialog.animate(keyframe, { duration: 500, iterations: 1 })
+        await new Promise(r => setTimeout(r, 500));
+        signinDialog.style.display = "none";
         signinOpen = false;
     }
     if (registerOpen) {
+        registerDialog.animate(keyframe, { duration: 500, iterations: 1 })
+        await new Promise(r => setTimeout(r, 500));
         registerDialog.style.display = "none";
         registerOpen = false;
     }
