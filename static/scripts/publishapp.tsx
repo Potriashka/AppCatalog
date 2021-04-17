@@ -7,7 +7,7 @@ check = () => {
 
 window.onload = check;
 
-let add = () => {
+let publish = () => {
     check();
 
     window.location.replace("/");
