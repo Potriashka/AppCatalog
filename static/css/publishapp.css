@@ -1,5 +1,9 @@
-.header {
+h3 {
     margin-bottom: 2vh !important;
+}
+
+#appName {
+    text-align: center;
 }
 
 .row {
