@@ -8,6 +8,16 @@ body {
     font-family: "Ubuntu", serif !important;
 }
 
+input, textarea {
+    background: none !important;
+    border-color: #37b39a !important;
+    color: lightgray !important;
+}
+
+input:focus, textarea:focus {
+    box-shadow: 0 0 0 0.25rem #2c8d7a !important;
+}
+
 .btn-outline-success {
     color: #58eac3 !important;
     background-color: transparent !important;
