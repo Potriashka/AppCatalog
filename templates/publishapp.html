@@ -1,7 +1,7 @@
 {% extends "base.html" %}
-{% block title %}Add App{% endblock %}
+{% block title %}Publish App{% endblock %}
 {% block body %}
-    <link rel="stylesheet" href="{{url_for('static', filename='css/about.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/publishapp.css')}}">
     <br>
     <center>
         <div class="container">
@@ -12,21 +12,39 @@
         <div class="row">
             <div class="col">
                 <center>
-                    <h2 class="header">Enter the Name of Your App</h2>
+                    <h3 class="header">Enter the Name of Your App</h3>
                     <input class="form-control short" id="name" placeholder="My Awesome App">
                 </center>
             </div>
             <div class="col order-1">
                 <center>
-                    <h2 class="header">Upload the Icon</h2>
+                    <h3 class="header">Upload the Icon</h3>
                     <div class="input-group short">
                         <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
                     </div>
                 </center>
             </div>
         </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <center>
+                    <h3 class="header">Enter the Description</h3>
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Description" id="floatingTextarea2"></textarea>
+                        <label for="floatingTextarea2">Description</label>
+                    </div>
+                </center>
+            </div>
+            <div class="col order-1">
+                <center>
+                    <h3 class="header">Something else</h3>
+                </center>
+            </div>
+        </div>
+        <hr>
     </div>
     <center>
-        <button class="btn btn-outline-primary">Publish</button>
+        <button class="btn btn-outline-success">Publish</button>
     </center>
 {% endblock %}
