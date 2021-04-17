@@ -25,9 +25,13 @@ def account():
 def publishers():
     return render_template("publishers.html")
 
-@app.route("/add")
-def addapp():
-	return render_template("addapp.html")
+@app.route("/publish")
+def publishApp():
+	return render_template("publishapp.html")
+
+@app.route("/<notFoundPage>")
+def notFound(notFoundPage):
+    return render_template("404.html")
 
 if __name__ == "__main__":
 	app.run(debug=True)
