@@ -1,22 +1,32 @@
 {% extends "base.html" %}
-{% block title %}New App{% endblock %}
+{% block title %}Add App{% endblock %}
 {% block body %}
-
-  <link rel="stylesheet" href="{{url_for('static', filename='css/newapp.css')}}">
-  <br>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/about.css')}}">
+    <br>
     <center>
         <div class="container">
-            <h1 class="text1">New App</h1>
+            <h1 class="text1">Publish App</h1>
         </div>
     </center>
-
-    <p class="k" id="CHim">Choose an image</p>
-    <p class="k" id="ENem">Enter a name of an app</p>
-
-    <form>
-        <input type="file" id="fileChooser">
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Great app">
-    </form>
-  <!-- scripts -->
-  <script src="{{url_for('static', filename='scripts/newapp.tsx')}}"></script>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <center>
+                    <h2 class="header">Enter the Name of Your App</h2>
+                    <input class="form-control short" id="name" placeholder="My Awesome App">
+                </center>
+            </div>
+            <div class="col order-1">
+                <center>
+                    <h2 class="header">Upload the Icon</h2>
+                    <div class="input-group short">
+                        <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                    </div>
+                </center>
+            </div>
+        </div>
+    </div>
+    <center>
+        <button class="btn btn-outline-primary">Publish</button>
+    </center>
 {% endblock %}
