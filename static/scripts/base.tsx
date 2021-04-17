@@ -75,7 +75,10 @@ document.getElementById("registerLink").onclick = openRegisterDialog;
 
 let closeDialog = () => {
     if (signinOpen) {
-        signinDialog.style.display = "none";
+        signinDialog.animate([
+            { width: "0%" }, { height: "0%" }, { opacity: "0" }
+        ], { duration: 1000, iterations: 1 })
+        // signinDialog.style.display = "none";
         signinOpen = false;
     }
     if (registerOpen) {
