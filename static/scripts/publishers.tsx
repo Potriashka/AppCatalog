@@ -1,6 +1,6 @@
 let publisherContainer = document.getElementById("publishers");
 
-firebase.database().ref("/").on("value", function(snapshot) {
+firebase.database().ref("/").on("value", (snapshot) => {
     if (snapshot.val()) {
         let publishers = "";
         for (let username in snapshot.val()["user"])
