@@ -158,7 +158,7 @@ dialog {
     height: 100%;
     width: 30vw;
     background-color: #232c33;
-    animation: dialog 1s 1;
+    animation: dialog .5s 1;
 }
 
 .header {
