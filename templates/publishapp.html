@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col">
                 <center>
-                    <h3 class="header">Enter the Name of Your Project</h3>
+                    <h3>Enter the Name of Your Project</h3>
                     <input class="form-control short" id="appName" placeholder="My Awesome App">
                 </center>
             </div>
@@ -29,7 +29,7 @@
         <div class="row">
             <div class="col">
                 <center>
-                    <h3 class="header">Enter the Description</h3>
+                    <h3>Enter the Description</h3>
                     <div class="form-floating">
                         <textarea class="form-control" placeholder="Description" id="floatingTextarea2"></textarea>
                         <label for="floatingTextarea2">Description</label>
@@ -38,7 +38,7 @@
             </div>
             <div class="col order-1">
                 <center>
-                    <h3 class="header">Choose the Type of Your App</h3>
+                    <h3>Choose the Type of Your App</h3>
                     <ul class="list-group short">
                         <li class="list-group-item" id="webButton">Web App</li>
                         <li class="list-group-item" id="mobileButton">Mobile App</li>
@@ -52,10 +52,28 @@
             </div>
         </div>
         <hr>
+        <div class="row">
+            <div class="col">
+                <h3>Collaborators</h3>
+                <button class="btn btn-outline-success">Add Collaborator</button>
+            </div>
+            <div class="col order-1">
+                <center>
+                    <h3>Links</h3>
+                    <div id="web">
+                        <input class="form-control short" placeholder="Paste the website link">
+                    </div>
+                    <br>
+                    <input class="form-control short" placeholder="Paste the link to source code">
+                </center>
+            </div>
+        </div>
     </div>
     <center>
         <button class="btn btn-outline-success" id="publishButton" onclick="publish();">Publish</button>
     </center>
+    <br>
+    <br>
 
     <!-- script -->
     <script src="{{url_for('static', filename='scripts/publishapp.tsx')}}"></script>
