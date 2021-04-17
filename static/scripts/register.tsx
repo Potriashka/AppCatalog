@@ -1,6 +1,8 @@
-if (checkCookie("username")) {
-    alert("You are already signed in!");
-    window.location.replace("/");
+window.onload = () => {
+    if (checkCookie("username")) {
+        alert("You are already signed in!");
+        window.location.replace("/");
+    }
 }
 
 function register() {
