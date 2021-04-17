@@ -1,3 +1,8 @@
+if (checkCookie("username")) {
+    alert("You are already signed in!");
+    window.location.replace("/");
+}
+
 function register() {
     let button = document.getElementById("buttonRegister");
     button.innerHTML = "<i class=\"fa fa-spinner fa-spin\"></i> Register";
