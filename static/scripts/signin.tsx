@@ -1,3 +1,8 @@
+if (checkCookie("username")) {
+    alert("You are already signed in!");
+    window.location.replace("/");
+}
+
 function signin() {
     let button = document.getElementById("buttonSignIn");
     button.innerHTML = "<i class=\"fa fa-spinner fa-spin\"></i> Sign In";
@@ -24,4 +29,12 @@ function signin() {
             }
         });
     }
+}
+
+document.getElementById("noAccount").onclick = () => {
+    openRegisterDialog();
+}
+
+document.getElementById("alreadyAccount").onclick = () => {
+    openSignInDialog();
 }
