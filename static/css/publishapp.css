@@ -7,11 +7,20 @@
 }
 
 textarea {
-    height: 200px !important;
+    height: 300px !important;
 }
 
 label {
     color: darkgray !important;
+}
+
+ul {
+    cursor: pointer;
+}
+
+#otherInput {
+    margin-top: 1vh;
+    display: none;
 }
 
 @media screen and (max-width: 1000px) {
