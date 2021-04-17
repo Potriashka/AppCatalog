@@ -13,3 +13,13 @@ textarea {
 label {
     color: darkgray !important;
 }
+
+.form-control {
+    background: none !important;
+}
+
+@media screen and (max-width: 1000px) {
+    .col {
+        margin-bottom: 5vh !important;
+    }
+}
