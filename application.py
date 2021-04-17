@@ -25,9 +25,9 @@ def account():
 def publishers():
     return render_template("publishers.html")
 
-@app.route("/newapp")
-def newapp():
-	return render_template("newapp.html")
+@app.route("/add")
+def addapp():
+	return render_template("addapp.html")
 
 if __name__ == "__main__":
 	app.run(debug=True)
