@@ -109,6 +109,18 @@ a:hover, a:focus {
     margin-right: 1vw;
 }
 
+#password, #password2 {
+    margin-bottom: 1.5vh;
+}
+
+#noAccount, #alreadyAccount {
+    cursor: pointer;
+}
+
+#noAccount:hover, #alreadyAccount:hover {
+    color: gray !important;
+}
+
 .container {
     text-align: center;
     margin-top: 5vh;
