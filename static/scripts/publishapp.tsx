@@ -10,3 +10,7 @@ window.onload = check;
 let add = () => {
     check();
 }
+
+document.getElementById("publishButton").onclick = () => {
+    window.location.replace("/");
+}
