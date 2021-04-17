@@ -1,3 +1,15 @@
-header {
+.header {
     margin-bottom: 2vh !important;
+}
+
+.row {
+    margin-bottom: 5vh !important;
+}
+
+textarea {
+    height: 200px !important;
+}
+
+label {
+    color: darkgray !important;
 }
