@@ -9,7 +9,7 @@ body {
     overflow-x: hidden;
 }
 
-input, textarea {
+input, textarea, li {
     background: none !important;
     border-color: #37b3a5 !important;
     color: lightgray !important;
