@@ -32,16 +32,19 @@ const typeButtons = [webButton, mobileButton, gameButton, cliButton, packageButt
 
 let selected;
 
+let select = (button) => {
+    if (selected) {
+        selected.style.setProperty("background", "none", "important");
+        selected.style.setProperty("color", "lightgray", "important");
+    }
+    button.style.setProperty("background-color", "#58eac3", "important");
+    button.style.setProperty("color", "black", "important");
+    selected = button;
+}
+
 typeButtons.forEach((button) => {
     button.onclick = function() {
-        if (selected) {
-            selected.style.setProperty("background", "none", "important");
-            selected.style.setProperty("color", "lightgray", "important");
-        }
-        button.style.setProperty("background-color", "#58eac3", "important");
-        button.style.setProperty("color", "black", "important");
-        selected = button;
-
+        select(button);
     }
 });
 
@@ -53,13 +56,7 @@ document.onkeydown = (e) => {
             otherButton.innerHTML = otherInput.value;
             otherInput.style.display = "none";
             otherButton.style.display = "block";
-            otherButton.style.setProperty("background-color", "#58eac3", "important");
-            otherButton.style.setProperty("color", "black", "important");
-            if (selected) {
-                selected.style.setProperty("background", "none", "important");
-                selected.style.setProperty("color", "lightgray", "important");
-            }
-            selected = otherButton;
+            select(otherButton);
         }
     }
 }
