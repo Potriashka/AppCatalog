@@ -20,7 +20,10 @@ let signin = () => {
                 if (snapshot.val()["Password"] == password) {
                     setCookie("username", username, 100);
                     setCookie("name", snapshot.val()["Name"], 100);
-                    window.location.replace("/");
+                    button.innerHTML = "Sign in";
+                    closeDialog();
+                    organizeButtons();
+                    return;
                 } else {
                     button.innerHTML = "Sign in";
                     alert("Username or password is incorrect. Try again.");

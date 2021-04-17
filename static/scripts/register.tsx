@@ -23,7 +23,9 @@ let register = () => {
                         });
                         setCookie("username", username, 100);
                         setCookie("name", name, 100);
-                        window.location.replace("/");
+                        button.innerHTML = "Register";
+                        closeDialog();
+                        organizeButtons();
                         return;
                     } else {
                         if (!done) {

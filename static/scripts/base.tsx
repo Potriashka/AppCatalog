@@ -16,21 +16,25 @@ let account = document.getElementById("account");
 let buttonsFooter = document.getElementsByClassName("buttonsFooter");
 let accountFooter = document.getElementById("accountFooter");
 
-if (!checkCookie("username")) {
-    buttons.style.display = "inline";
-    account.style.display = "none";
+let organizeButtons = () => {
+    if (!checkCookie("username")) {
+        buttons.style.display = "inline";
+        account.style.display = "none";
 
-    for (let i = 0; i < buttonsFooter.length; i++)
-        buttonsFooter[i].style.display = "inline";
-    accountFooter.style.display = "none";
-} else {
-    buttons.style.display = "none";
-    account.style.display = "inline";
+        for (let i = 0; i < buttonsFooter.length; i++)
+            buttonsFooter[i].style.display = "inline";
+        accountFooter.style.display = "none";
+    } else {
+        buttons.style.display = "none";
+        account.style.display = "inline";
 
-    for (let i = 0; i < buttonsFooter.length; i++)
-        buttonsFooter[i].style.display = "none";
-    accountFooter.style.display = "inline";
+        for (let i = 0; i < buttonsFooter.length; i++)
+            buttonsFooter[i].style.display = "none";
+        accountFooter.style.display = "inline";
+    }
 }
+
+organizeButtons();
 
 document.getElementById("accountButton").onclick = () => {
     window.location.replace("/account");
