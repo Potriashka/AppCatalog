@@ -8,3 +8,7 @@ window.onload = () => {
 let add = () => {
 
 }
+
+document.getElementById("publishButton").onclick = () => {
+    window.location.replace("/");
+}
