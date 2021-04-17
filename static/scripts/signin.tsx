@@ -1,11 +1,8 @@
-window.onload = () => {
+let signin = () => {
     if (checkCookie("username")) {
         alert("You are already signed in!");
         window.location.replace("/");
     }
-}
-
-function signin() {
     let button = document.getElementById("buttonSignIn");
     button.innerHTML = "<i class=\"fa fa-spinner fa-spin\"></i> Sign In";
     let username = document.getElementById("usernameSignin").value;

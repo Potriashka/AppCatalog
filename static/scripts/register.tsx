@@ -1,11 +1,8 @@
-window.onload = () => {
+let register = () => {
     if (checkCookie("username")) {
-        alert("You are already signed in!");
+        alert("You are already registered!");
         window.location.replace("/");
     }
-}
-
-function register() {
     let button = document.getElementById("buttonRegister");
     button.innerHTML = "<i class=\"fa fa-spinner fa-spin\"></i> Register";
     let done = false;
