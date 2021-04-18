@@ -7,12 +7,17 @@
     left: 5vw;
 }
 
-.leftInfo {
-    font-size: 30px;
-}
+
 
 .contentDiv2 {
-    position: relative;
+    position: absolute;
+    top: 28.5%;
+    left: 33vw;
+}
+
+.contentDiv3 {
+    position: absolute;
+    top: 41%;
     left: 33vw;
 }
 
@@ -23,4 +28,29 @@ a:hover, a:focus {
 
 #description {
     width: 20%;
+}
+
+#jjust {
+    position: absolute;
+    top: 10%;
+    left: 60%;
+}
+
+#jjjust {
+    position: absolute;
+    top: 2.5%;
+    left: 40%;
+    color: gold;
+}
+
+#jjust1 {
+    position: absolute;
+    top: 30%;
+    left: 60%;
+}
+
+#jjust2 {
+    position: absolute;
+    top: 30%;
+    left: 75%;
 }
