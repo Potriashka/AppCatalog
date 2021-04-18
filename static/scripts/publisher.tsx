@@ -17,7 +17,7 @@ firebase.database().ref("/user/").on("value", (snapshot) => {
         alert("This publisher does not exist!");
     } else {
         for(const [key, val] of Object.entries(apps)) {
-            content.innerHTML += val["appName"] + "<br>";
+            content.innerHTML += `<a href="/publisher/${name}/${val["appName"]}" class="b">${val["appName"]}</a><br>`;
         }
     }
 });
