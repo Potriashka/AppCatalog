@@ -1,4 +1,4 @@
-check = () => {
+let check = () => {
     if (!checkCookie("username")) {
         alert("You are not signed in!");
         openSignInDialog();
@@ -7,10 +7,45 @@ check = () => {
 
 window.onload = check;
 
-let publish = () => {
+function publish() {
     check();
 
-    window.location.replace("/");
+    let button = document.getElementById("publishButton");
+    button.innerHTML = "<i class=\"fa fa-spinner fa-spin\"></i> Publish";
+
+    const ref = firebase.storage().ref();
+
+    let appName = document.getElementById("nameOfApp").value;
+    let description = document.getElementById("description").value;
+    let appType = selected.innerText;
+    let link = document.getElementById("link").value;
+    let source = document.getElementById("source").value;
+
+    const file = document.getElementById("icon").files[0];
+
+    const name = "/" + appName;
+
+    const metadata = {
+        contentType: file.type
+    }
+
+    const task = ref.child(name).put(file, metadata);
+
+    task.then(snapshot => snapshot.ref.getDownloadURL())
+        .then(url => {
+            firebase.database().ref("/user/" + getCookie("username") + "/apps/" + appName).set({
+                appName: appName,
+                description: description,
+                appType: appType,
+                link: link,
+                source: source,
+                imageUrl: url
+            });
+        });
+
+    button.innerHTML = "Publish";
+
+    alert("Published!");
 }
 
 let otherButton = document.getElementById("other");
@@ -43,7 +78,7 @@ let select = (button) => {
 }
 
 typeButtons.forEach((button) => {
-    button.onclick = function() {
+    button.onclick = function () {
         select(button);
     }
 });
