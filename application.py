@@ -29,6 +29,10 @@ def publishers():
 def publishApp():
 	return render_template("publishapp.html")
 
+@app.route("/publisher/<publisherName>")
+def publisher(publisherName):
+    return render_template("publisher.html", publisher=publisherName)
+
 @app.route("/<notFoundPage>")
 def notFound(notFoundPage):
     return render_template("404.html")
