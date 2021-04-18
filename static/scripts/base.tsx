@@ -88,3 +88,12 @@ let closeDialog = async () => {
         registerOpen = false;
     }
 }
+
+document.getElementById("noAccount").onclick = () => {
+    openRegisterDialog();
+}
+
+document.getElementById("alreadyAccount").onclick = () => {
+    openSignInDialog();
+}
+
