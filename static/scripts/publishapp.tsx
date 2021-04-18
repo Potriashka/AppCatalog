@@ -1,5 +1,8 @@
+let publishButton = document.getElementById("publishButton");
+
 let check = () => {
     if (!checkCookie("username")) {
+        publishButton.innerHTML = "Publish";
         alert("You are not signed in!");
         openSignInDialog();
     }
@@ -10,8 +13,7 @@ window.onload = check;
 function publish() {
     check();
 
-    let button = document.getElementById("publishButton");
-    button.innerHTML = "<i class=\"fa fa-spinner fa-spin\"></i> Publish";
+    publishButton.innerHTML = "<i class=\"fa fa-spinner fa-spin\"></i> Publish";
 
     const ref = firebase.storage().ref();
 
@@ -43,7 +45,7 @@ function publish() {
             });
         });
 
-    button.innerHTML = "Publish";
+    publishButton.innerHTML = "Publish";
 
     alert("Published!");
 }
