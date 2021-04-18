@@ -3,7 +3,6 @@ import os
 
 app = Flask(__name__)
 
-
 @app.route("/")
 def index():
 	return render_template("index.html")
@@ -32,6 +31,10 @@ def publishApp():
 @app.route("/publisher/<publisherName>")
 def publisher(publisherName):
     return render_template("publisher.html", publisher=publisherName)
+
+@app.route("/publisher/<publisherName>/<appName>")
+def application(publisherName, appName):
+    return render_template("app.html", publisher=publisherName, app=appName)
 
 @app.route("/<notFoundPage>")
 def notFound(notFoundPage):
