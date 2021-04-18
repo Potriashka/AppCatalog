@@ -50,21 +50,23 @@ let registerDialog = document.getElementById("registerDialog");
 let signinOpen = false;
 let registerOpen = false;
 
-let openSignInDialog = () => {
-    signinDialog.style.display = "block";
+let openSignInDialog = async () => {
     if (registerOpen) {
+        await closeDialog();
         registerDialog.style.display = "none";
         registerOpen = false;
     }
+    signinDialog.style.display = "block";
     signinOpen = true;
 }
 
-let openRegisterDialog = () => {
-    registerDialog.style.display = "block";
+let openRegisterDialog = async () => {
     if (signinOpen) {
+        await closeDialog();
         signinDialog.style.display = "none";
         signinOpen = false;
     }
+    registerDialog.style.display = "block";
     registerOpen = true;
 }
 
@@ -73,7 +75,7 @@ document.getElementById("signinLink").onclick = openSignInDialog;
 document.getElementById("registerButton").onclick = openRegisterDialog;
 document.getElementById("registerLink").onclick = openRegisterDialog;
 
-let closeDialog = async () => {
+async function closeDialog() {
     let keyframe = [{ opacity: "0.2", left: "90vw" }]
     if (signinOpen) {
         signinDialog.animate(keyframe, { duration: 300, iterations: 1 })
