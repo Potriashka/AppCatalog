@@ -1,0 +1,13 @@
+#publisherName {
+    display: none !important;
+}
+
+#contentDiv {
+    position: relative;
+    left: 20%;
+}
+
+#appName1 {
+    position: relative;
+    left: 20%;
+}
