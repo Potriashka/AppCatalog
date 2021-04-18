@@ -25,7 +25,7 @@ input:focus, textarea:focus {
 
 #searchInput {
     display: none;
-    width: 1vw;
+    width: 0vw;
     opacity: 0;
 }
 

@@ -100,7 +100,10 @@ document.getElementById("alreadyAccount").onclick = () => {
 let searchButton = document.getElementById("searchButton");
 let searchInput = document.getElementById("searchInput");
 
-let search = () => {
+let search = async () => {
+    let keyframeButton = [{ opacity: "0" }];
+    searchButton.animate(keyframeButton, { duration: 200, iterations: 1, fill: "forwards" })
+    await new Promise(r => setTimeout(r, 200));
     searchButton.style.display = "none";
     searchInput.style.display = "block";
     searchInput.focus();
@@ -114,6 +117,9 @@ window.onkeydown = async (e) => {
         searchInput.animate(keyframe, { duration: 500, iterations: 1, fill: "forwards" });
         await new Promise(r => setTimeout(r, 500));
         searchInput.style.display = "none";
+        searchButton.style.opacity = "0";
+        let keyframeButton = [{ opacity: "1" }];
         searchButton.style.display = "block";
+        searchButton.animate(keyframeButton, { duration: 200, iterations: 1, fill: "forwards" });
     }
 }
