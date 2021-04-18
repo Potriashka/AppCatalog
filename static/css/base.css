@@ -19,6 +19,16 @@ input:focus, textarea:focus {
     box-shadow: 0 0 0 0.25rem #3bc4b5 !important;
 }
 
+#search {
+    margin-right: 1vw;
+}
+
+#searchInput {
+    display: none;
+    width: 1vw;
+    opacity: 0;
+}
+
 .btn-outline-success {
     color: #58eac3 !important;
     background-color: transparent !important;
@@ -187,6 +197,7 @@ dialog {
     }
 }
 
+
 @keyframes text {
     0% {
         top: 50%;
@@ -213,10 +224,4 @@ dialog {
         left: 0 !important;
         width: 100vw !important;
     }
-}
-
-#search {
-    width: 20vw;
-    position: relative;
-    margin-right: 2vw;
 }

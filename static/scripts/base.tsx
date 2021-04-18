@@ -96,3 +96,12 @@ document.getElementById("noAccount").onclick = () => {
 document.getElementById("alreadyAccount").onclick = () => {
     openSignInDialog();
 }
+
+let search = () => {
+    document.getElementById("searchButton").style.display = "none";
+    let searchInput = document.getElementById("searchInput");
+    searchInput.style.display = "block";
+    searchInput.focus();
+    let keyframe = [{ opacity: "1", width: "20vw", display: "block" }];
+    searchInput.animate(keyframe, { duration: 500, iterations: 1, fill: "forwards" });
+}
