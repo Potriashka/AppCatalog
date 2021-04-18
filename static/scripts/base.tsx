@@ -96,4 +96,3 @@ document.getElementById("noAccount").onclick = () => {
 document.getElementById("alreadyAccount").onclick = () => {
     openSignInDialog();
 }
-

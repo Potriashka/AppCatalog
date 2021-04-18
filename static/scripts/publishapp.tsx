@@ -1,4 +1,5 @@
 let publishButton = document.getElementById("publishButton");
+let publisherName = getCookie("name");
 
 let check = () => {
     if (!checkCookie("username")) {
@@ -47,7 +48,9 @@ function publish() {
 
     publishButton.innerHTML = "Publish";
 
-    alert("Published!");
+    document.getElementById("publishButton").onclick = () => {
+        window.location.replace("/publisher/" + publisherName + "/" + appName);
+    }
 }
 
 let otherButton = document.getElementById("other");
