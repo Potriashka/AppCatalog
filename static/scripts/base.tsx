@@ -76,14 +76,14 @@ document.getElementById("registerLink").onclick = openRegisterDialog;
 let closeDialog = async () => {
     let keyframe = [{ opacity: "0.2", left: "90vw" }]
     if (signinOpen) {
-        signinDialog.animate(keyframe, { duration: 500, iterations: 1 })
-        await new Promise(r => setTimeout(r, 500));
+        signinDialog.animate(keyframe, { duration: 300, iterations: 1 })
+        await new Promise(r => setTimeout(r, 300));
         signinDialog.style.display = "none";
         signinOpen = false;
     }
     if (registerOpen) {
-        registerDialog.animate(keyframe, { duration: 500, iterations: 1 })
-        await new Promise(r => setTimeout(r, 500));
+        registerDialog.animate(keyframe, { duration: 300, iterations: 1 })
+        await new Promise(r => setTimeout(r, 300));
         registerDialog.style.display = "none";
         registerOpen = false;
     }
