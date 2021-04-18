@@ -2,12 +2,25 @@
     display: none !important;
 }
 
-#contentDiv {
+.contentDiv {
     position: relative;
     left: 5vw;
 }
 
-#appInfo {
+.leftInfo {
+    font-size: 30px;
+}
+
+.contentDiv2 {
     position: relative;
-    left: 5%;
+    left: 33vw;
+}
+
+a:hover, a:focus {
+    color: darkgray !important;
+    background-size: 100% 2px;
+}
+
+#description {
+    width: 20%;
 }

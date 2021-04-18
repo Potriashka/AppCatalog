@@ -8,10 +8,27 @@
             <h2 class="text1" id="nameOfApp">{{ app }}</h2>
         </div>
     </center>
-    <div id="contentDiv">
+    <div class="contentDiv">
         <h3>Name of the App:</h3>
+        <div class="leftInfo" id="appInfo"><i class="fa fa-spinner fa-spin"></i> Loading</div>
     </div>
-    <div id="appInfo"><i class="fa fa-spinner fa-spin"></i> Loading</div>
+    <br>
+    <div class="contentDiv">
+        <h3>Description of the App:</h3>
+        <div class="leftInfo" id="description"></div>
+    </div>
+    <div class="contentDiv2">
+        <h3>Link to the App:</h3>
+        <a class="b" href=""><div class="leftInfo" id="link"></div></a>
+    </div>
+    <div class="contentDiv2">
+        <h3>Type of the App:</h3>
+        <div class="leftInfo" id="type"></div>
+    </div>
+    <div class="contentDiv">
+        <h3>Source code:</h3>
+        <div class="leftInfo" id="source"></div>
+    </div>
     <!--  the script  -->
     <!--  {% block script %}<script src="{{url_for('static', filename='scripts/app.tsx')}}"></script>{% endblock %}  -->
     <!--  the stylesheet  -->
