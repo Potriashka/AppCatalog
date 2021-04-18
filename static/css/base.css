@@ -214,9 +214,3 @@ dialog {
         width: 100vw !important;
     }
 }
-
-#search {
-    width: 20vw;
-    position: relative;
-    margin-right: 2vw;
-}

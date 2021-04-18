@@ -122,9 +122,11 @@ function updateImageDisplay() {
             var listItem = document.createElement('li');
             var para = document.createElement('p');
             if(validFileType(curFiles[i])) {
-                para.textContent = 'File name: ' + curFiles[i].name + ', file size ' + returnFileSize(curFiles[i].size) + '.';
+                para.textContent = 'File name: "' + curFiles[i].name + '", file size: ' + returnFileSize(curFiles[i].size) + '.';
                 var image = document.createElement('img');
                 image.src = window.URL.createObjectURL(curFiles[i]);
+                image.width = "130";
+                image.height = "130";
 
                 let div = document.getElementById("uploadThingy")
                 div.style.display = "none";
