@@ -2,8 +2,50 @@ h3 {
     margin-bottom: 2vh !important;
 }
 
-#appName {
+#nameOfApp {
     text-align: center;
+}
+
+.icon .form-group {
+    padding: 1em;
+    margin: 1em;
+}
+
+.icon input[type=file] {
+    outline: 0;
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+}
+
+.icon .label {
+    width: 17vw;
+    border: 2px dashed grey;
+    border-radius: 5px;
+    display: block;
+    padding: 1.2em;
+    transition: border 300ms ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.icon .label i {
+    display: block;
+    font-size: 42px;
+    padding-bottom: 16px;
+}
+
+.icon .label i, .icon .label .title {
+    color: gray;
+    transition: 200ms color;
+}
+
+.icon .label:hover {
+    border: 2px solid whitesmoke;
+}
+
+.icon .label:hover i, .icon .label:hover .title {
+    color: white;
 }
 
 .row {
