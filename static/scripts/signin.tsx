@@ -32,11 +32,3 @@ let signin = () => {
         });
     }
 }
-
-document.getElementById("noAccount").onclick = () => {
-    openRegisterDialog();
-}
-
-document.getElementById("alreadyAccount").onclick = () => {
-    openSignInDialog();
-}
