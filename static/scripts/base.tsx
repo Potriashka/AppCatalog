@@ -97,11 +97,23 @@ document.getElementById("alreadyAccount").onclick = () => {
     openSignInDialog();
 }
 
+let searchButton = document.getElementById("searchButton");
+let searchInput = document.getElementById("searchInput");
+
 let search = () => {
-    document.getElementById("searchButton").style.display = "none";
-    let searchInput = document.getElementById("searchInput");
+    searchButton.style.display = "none";
     searchInput.style.display = "block";
     searchInput.focus();
     let keyframe = [{ opacity: "1", width: "20vw", display: "block" }];
     searchInput.animate(keyframe, { duration: 500, iterations: 1, fill: "forwards" });
+}
+
+window.onkeydown = async (e) => {
+    if (e.key == "Escape") {
+        let keyframe = [{ opacity: "0", width: "0vw", display: "none" }];
+        searchInput.animate(keyframe, { duration: 500, iterations: 1, fill: "forwards" });
+        await new Promise(r => setTimeout(r, 500));
+        searchInput.style.display = "none";
+        searchButton.style.display = "block";
+    }
 }
