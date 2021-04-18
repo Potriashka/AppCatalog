@@ -5,7 +5,7 @@ This project is a web app catalog where you can see/upload/download apps or shar
 
 You can find it <a target="_blank" href="https://ac2d0.herokuapp.com/">here</a>.
 # Contributors
-- [Peter Repiev](https://github.com/Potriashka) (his idea and implementation)
-- [Bekhruz Niyazov](https://github.com/BekhruzSNiyazov) (just polished a couple of things and helped in the process of development)
+- [Peter Repiev](https://github.com/Potriashka) (idea and most of the front end and a bit of back end)
+- [Bekhruz Niyazov](https://github.com/BekhruzSNiyazov) (most of the back end and a bit of front end)
 # License
 This code is licensed with MIT license.
