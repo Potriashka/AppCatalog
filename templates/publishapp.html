@@ -13,15 +13,24 @@
             <div class="col">
                 <center>
                     <h3>Enter the Name of Your Project</h3>
-                    <input class="form-control short" id="appName" placeholder="My Awesome App">
+                    <input class="form-control short" id="nameOfApp" placeholder="My Awesome App">
                 </center>
             </div>
             <div class="col order-1">
                 <center>
                     <h3 class="header">Upload the Icon</h3>
-                    <div class="input-group short">
-                        <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+                    <div class="icon">
+                        <div class="form-group">
+                            <label class="label">
+                                <i class="material-icons">attach_file</i>
+                                <span class="title">Upload icon</span>
+                                <input type="file" id="icon">
+                            </label>
+                        </div>
                     </div>
+                    <div class="open_grepper_editor" title="Edit & Save To Grepper"></div>
                 </center>
             </div>
         </div>
@@ -31,8 +40,8 @@
                 <center>
                     <h3>Enter the Description</h3>
                     <div class="form-floating">
-                        <textarea class="form-control" placeholder="Description" id="floatingTextarea2"></textarea>
-                        <label for="floatingTextarea2">Description</label>
+                        <textarea class="form-control" placeholder="Description" id="description"></textarea>
+                        <label for="description">Description</label>
                     </div>
                 </center>
             </div>
@@ -61,10 +70,10 @@
                 <center>
                     <h3>Links</h3>
                     <div id="web">
-                        <input class="form-control short" placeholder="Paste the website link">
+                        <input class="form-control short" placeholder="Paste the website link" id="link">
                     </div>
                     <br>
-                    <input class="form-control short" placeholder="Paste the link to source code">
+                    <input class="form-control short" placeholder="Paste the link to source code" id="source">
                 </center>
             </div>
         </div>
