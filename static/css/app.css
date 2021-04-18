@@ -2,55 +2,10 @@
     display: none !important;
 }
 
-.contentDiv {
-    position: relative;
-    left: 5vw;
+.screenshot {
+    margin-left: 5vw;
 }
 
-
-
-.contentDiv2 {
-    position: absolute;
-    top: 28.5%;
-    left: 33vw;
-}
-
-.contentDiv3 {
-    position: absolute;
-    top: 41%;
-    left: 33vw;
-}
-
-a:hover, a:focus {
-    color: darkgray !important;
-    background-size: 100% 2px;
-}
-
-#description {
-    width: 20%;
-}
-
-#jjust {
-    position: absolute;
-    top: 10%;
-    left: 60%;
-}
-
-#jjjust {
-    position: absolute;
-    top: 2.5%;
-    left: 40%;
-    color: gold;
-}
-
-#jjust1 {
-    position: absolute;
-    top: 30%;
-    left: 60%;
-}
-
-#jjust2 {
-    position: absolute;
-    top: 30%;
-    left: 75%;
+h4 {
+    margin-top: 2vh;
 }

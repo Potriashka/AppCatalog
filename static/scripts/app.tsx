@@ -1,6 +1,5 @@
 let name = document.getElementById("publisherName").innerText;
 let app;
-let img;
 let found = false;
 
 firebase.database().ref("/user/").on("value", (snapshot) => {
@@ -10,23 +9,15 @@ firebase.database().ref("/user/").on("value", (snapshot) => {
             app = val["apps"][document.getElementById("nameOfApp").innerText];
             break;
         }
-
     }
     if (!found) {
         alert("This app does not exist!");
     } else {
-        let container = document.getElementById("appInfo");
-        let descContainer = document.getElementById("description");
-        let link = document.getElementById("link");
-        let type = document.getElementById("type");
-        let source = document.getElementById("source");
-        container.innerHTML = app["appName"];
-        descContainer.innerHTML = app["description"];
-        link.innerHTML = app["link"];
-        type.innerHTML = app["appType"];
-        source.innerHTML = app["source"];
-        let link2 = document.createElement("a");
-        a.appendChild('https://' + link);
+        document.getElementById("icon").src = app["imageUrl"];
+        document.getElementById("description").innerHTML += app["description"];
+        document.getElementById("type").innerHTML += app["appType"];
+        document.getElementById("link").innerHTML += `<a href="${app["link"]}" class="b">${app["link"]}</a>`;
+        document.getElementById("source").innerHTML += `<a href="${app["source"]}" class="b">${app["source"]}</a>`;
         // app["appType"] for type
         // app["imageUrl"] for image link
         // app["source"] for link to the source code
