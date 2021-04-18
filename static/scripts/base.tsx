@@ -50,21 +50,23 @@ let registerDialog = document.getElementById("registerDialog");
 let signinOpen = false;
 let registerOpen = false;
 
-let openSignInDialog = () => {
-    signinDialog.style.display = "block";
+let openSignInDialog = async () => {
     if (registerOpen) {
+        await closeDialog();
         registerDialog.style.display = "none";
         registerOpen = false;
     }
+    signinDialog.style.display = "block";
     signinOpen = true;
 }
 
-let openRegisterDialog = () => {
-    registerDialog.style.display = "block";
+let openRegisterDialog = async () => {
     if (signinOpen) {
+        await closeDialog();
         signinDialog.style.display = "none";
         signinOpen = false;
     }
+    registerDialog.style.display = "block";
     registerOpen = true;
 }
 
@@ -73,7 +75,7 @@ document.getElementById("signinLink").onclick = openSignInDialog;
 document.getElementById("registerButton").onclick = openRegisterDialog;
 document.getElementById("registerLink").onclick = openRegisterDialog;
 
-let closeDialog = async () => {
+async function closeDialog() {
     let keyframe = [{ opacity: "0.2", left: "90vw" }]
     if (signinOpen) {
         signinDialog.animate(keyframe, { duration: 300, iterations: 1 })
@@ -111,15 +113,23 @@ let search = async () => {
     searchInput.animate(keyframe, { duration: 500, iterations: 1, fill: "forwards" });
 }
 
+let closeSearch = async () => {
+    let keyframe = [{ opacity: "0", width: "0vw", display: "none" }];
+    searchInput.animate(keyframe, { duration: 500, iterations: 1, fill: "forwards" });
+    await new Promise(r => setTimeout(r, 500));
+    searchInput.style.display = "none";
+    searchButton.style.opacity = "0";
+    let keyframeButton = [{ opacity: "1" }];
+    searchButton.style.display = "block";
+    searchButton.animate(keyframeButton, { duration: 200, iterations: 1, fill: "forwards" });
+}
+
 window.onkeydown = async (e) => {
     if (e.key == "Escape") {
-        let keyframe = [{ opacity: "0", width: "0vw", display: "none" }];
-        searchInput.animate(keyframe, { duration: 500, iterations: 1, fill: "forwards" });
-        await new Promise(r => setTimeout(r, 500));
-        searchInput.style.display = "none";
-        searchButton.style.opacity = "0";
-        let keyframeButton = [{ opacity: "1" }];
-        searchButton.style.display = "block";
-        searchButton.animate(keyframeButton, { duration: 200, iterations: 1, fill: "forwards" });
+        await closeSearch();
     }
+}
+
+document.getElementById("page-container").onclick = async () => {
+    await closeSearch();
 }
