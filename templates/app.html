@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}{{ publisher }} on App Catalog{% endblock %}
+{% block body %}
+    <center>
+        <br>
+        <div class="container">
+            <h1 class="text1">{{ publisher }}</h1>
+            <h2 class="text1">{{ app }}</h2>
+        </div>
+    </center>
+    <div id="contentDiv">
+        <h3>Apps:</h3>
+    </div>
+    <!--  the script  -->
+    <!--  {% block script %}<script src="{{url_for('static', filename='scripts/app.tsx')}}"></script>{% endblock %}  -->
+    <!--  the stylesheet  -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/app.css')}}">
+    <div id="publisherName">{{ publisher }}</div>
+{% endblock %}
