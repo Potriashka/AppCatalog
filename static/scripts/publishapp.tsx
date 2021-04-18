@@ -1,7 +1,8 @@
 let publishButton = document.getElementById("publishButton");
-let publisherName = getCookie("name");
+let publisherName;
 
 let check = () => {
+    publisherName = getCookie("name");
     if (!checkCookie("username")) {
         publishButton.innerHTML = "Publish";
         alert("You are not signed in!");
