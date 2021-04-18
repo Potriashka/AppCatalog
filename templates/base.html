@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport"
@@ -130,12 +130,17 @@
                 </div>
             </center>
         </dialog>
+        <center>
+        <svg id="rect" width="1" height="1">
+            <rect  width="10000" height="10000" style="fill:rgb(0,255,0);stroke-width:3;stroke:rgb(0,0,0)" />
+        </svg>
+        </center>
         <div id="page-container">
             {% block body %}
                 <!--  body of the webpage  -->
             {% endblock %}
         </div>
-        <!--  the footer of the webpage  -->
+             <!--  the footer of the webpage  -->
         <footer id="footer">
             <span>
                 <p class="a">Peter and Bekhruz Inc.</p>

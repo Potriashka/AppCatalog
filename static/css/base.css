@@ -225,3 +225,15 @@ dialog {
         width: 100vw !important;
     }
 }
+
+#rect {
+    animation: rect 2s 1;
+}
+
+@keyframes rect {
+    0% {
+        display: inline;
+        width: 100%;
+        height: 100%;
+    }
+}
