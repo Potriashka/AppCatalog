@@ -74,3 +74,8 @@ ul {
         margin-bottom: 5vh !important;
     }
 }
+
+#iconUploaded {
+    width: 8vw;
+    height: 8vw;
+}
