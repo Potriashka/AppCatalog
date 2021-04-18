@@ -4,10 +4,10 @@
 
 #contentDiv {
     position: relative;
-    left: 20%;
+    left: 5vw;
 }
 
-#appName1 {
+#appInfo {
     position: relative;
-    left: 20%;
+    left: 5%;
 }

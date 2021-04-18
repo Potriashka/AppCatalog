@@ -6,7 +6,6 @@ let apps;
 firebase.database().ref("/user/").on("value", (snapshot) => {
     console.log(snapshot.val());
     for(const [key, val] of Object.entries(snapshot.val())) {
-        console.log(val);
         if (val["Name"] == name) {
             apps = val["apps"];
             found = true;

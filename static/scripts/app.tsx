@@ -1,14 +1,24 @@
-let publisherContainer = document.getElementById("appName1");
+let name = document.getElementById("publisherName").innerText;
+let app;
+let found = false;
 
-firebase.database().ref("/publisher/").on("value", (snapshot) => {
-    if (snapshot.val()) {
-        let appName = "";
-        for (let username in snapshot.val()["user"]) {
-            let appName = snapshot.val()["user"][username]["Name"]
-            publishers += `<a href="/publisher/${appName}" class="b">${appName}</a><br>`;
+firebase.database().ref("/user/").on("value", (snapshot) => {
+    for(const [key, val] of Object.entries(snapshot.val())) {
+        if (val["Name"] == name) {
+            found = true;
+            app = val["apps"][document.getElementById("nameOfApp").innerText];
+            break;
         }
-        publisherContainer.innerHTML = appName;
+    }
+    if (!found) {
+        alert("This app does not exist!");
     } else {
-        publisherContainer.innerHTML = "<h2>Can't find it</h2>"
+        let container = document.getElementById("appInfo");
+        container.innerHTML = app["appName"];
+        // app["appType"] for type
+        // app["description"] for description
+        // app["imageUrl"] for image link
+        // app["link"] for link to the website
+        // app["source"] for link to the source code
     }
 });
