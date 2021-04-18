@@ -12,7 +12,7 @@ let check = () => {
 
 window.onload = check;
 
-function publish() {
+async function publish() {
     check();
 
     publishButton.innerHTML = "<i class=\"fa fa-spinner fa-spin\"></i> Publish";
