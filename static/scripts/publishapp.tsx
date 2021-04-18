@@ -49,6 +49,13 @@ function publish() {
 
     publishButton.innerHTML = "Publish";
 
+    let keyframe = [{ width: "100%", height: "100%" }]
+    if (publish) {
+        publishButton.animate(keyframe, { duration: 300, iterations: 1 })
+        await new Promise(r => setTimeout(r, 300));
+        publishButton.style.display = "none";
+    }
+
     document.getElementById("publishButton").onclick = () => {
         window.location.replace("/publisher/" + publisherName + "/" + appName);
     }
