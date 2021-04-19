@@ -226,14 +226,130 @@ dialog {
     }
 }
 
-#rect {
-    animation: rect 2s 1;
+#circle {
+    position: absolute;
+    top: 34%;
+    left: 46.3%;
+    z-index: 5;
+    width: 100px;
+    height: 100px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    background: white;
+    animation: cicle 2s 1;
 }
 
-@keyframes rect {
+#circle2 {
+    position: absolute;
+    top: 31.5%;
+    left: 45%;
+    z-index: 4;
+    width: 150px;
+    height: 150px;
+    -webkit-border-radius: 75px;
+    -moz-border-radius: 75px;
+    border-radius: 75px;
+    background: rgb(130, 211, 137);
+    animation: cicle2 2s 1;
+}
+
+#circle3 {
+    position: absolute;
+    top: 29%;
+    left: 44%;
+    z-index: 3;
+    width: 200px;
+    height: 200px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    background: rgb(111, 177, 117);
+    animation: cicle3 2s 1;
+}
+#circle4 {
+    position: absolute;
+    top: 27%;
+    left: 42.5%;
+    z-index: 2;
+    width: 250px;
+    height: 250px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    border-radius: 150px;
+    background: rgb(98, 153, 116);
+    animation: cicle4 2s 1;
+}
+
+#circle5 {
+    position: absolute;
+    top: 24.8%;
+    left: 41.2%;
+    z-index: 1;
+    width: 300px;
+    height: 300px;
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    border-radius: 200px;
+    background: rgb(67, 97, 70);
+    animation: cicle5 2s 1;
+}
+
+@keyframes cicle {
     0% {
-        display: inline;
+        left: 45%;
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        border-radius: 100px;
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@keyframes cicle2 {
+    0% {
+        -webkit-border-radius: 200px;
+        -moz-border-radius: 200px;
+        border-radius: 200px;
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@keyframes cicle3 {
+    0% {
+        position: absolute;
+        left: 20%;
+        top: 40%;
+        -webkit-border-radius: 300px;
+        -moz-border-radius: 300px;
+        border-radius: 300px;
+        width: 600px;
+        height: 600px;
+    }
+}
+
+@keyframes cicle4 {
+    0% {
+        position: absolute;
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        border-radius: 100px;
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@keyframes cicle5 {
+    0% {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: .1;
         width: 100%;
         height: 100%;
+    }
+    80% {
+        opacity: .65;
     }
 }
