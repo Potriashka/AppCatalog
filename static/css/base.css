@@ -230,7 +230,7 @@ dialog {
     position: absolute;
     top: 34%;
     left: 46.3%;
-    z-index: 5;
+    z-index: -1;
     width: 100px;
     height: 100px;
     -webkit-border-radius: 50px;
@@ -244,7 +244,7 @@ dialog {
     position: absolute;
     top: 31.5%;
     left: 45%;
-    z-index: 4;
+    z-index: -2;
     width: 150px;
     height: 150px;
     -webkit-border-radius: 75px;
@@ -258,7 +258,7 @@ dialog {
     position: absolute;
     top: 29%;
     left: 44%;
-    z-index: 3;
+    z-index: -3;
     width: 200px;
     height: 200px;
     -webkit-border-radius: 100px;
@@ -271,7 +271,7 @@ dialog {
     position: absolute;
     top: 27%;
     left: 42.5%;
-    z-index: 2;
+    z-index: -4;
     width: 250px;
     height: 250px;
     -webkit-border-radius: 150px;
@@ -285,7 +285,7 @@ dialog {
     position: absolute;
     top: 24.8%;
     left: 41.2%;
-    z-index: 1;
+    z-index: -5;
     width: 300px;
     height: 300px;
     -webkit-border-radius: 200px;
