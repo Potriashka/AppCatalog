@@ -18,8 +18,16 @@ firebase.database().ref("/user/").on("value", (snapshot) => {
         document.getElementById("type").innerHTML += app["appType"];
         document.getElementById("link").innerHTML += `<a href="${app["link"]}" class="b">${app["link"]}</a>`;
         document.getElementById("source").innerHTML += `<a href="${app["source"]}" class="b">${app["source"]}</a>`;
-        // app["appType"] for type
-        // app["imageUrl"] for image link
-        // app["source"] for link to the source code
+
+        let recommended = app["recommended"];
+        let byDevs = document.getElementById("jjjust");
+
+        if (recommended == "no") {
+            // pass
+        }
+        if (recommended == "yes") {
+            byDevs.innerText = `✭ Recommended by Developers Team`;
+        }
+
     }
 });

@@ -43,7 +43,8 @@ async function publish() {
                 appType: appType,
                 link: link,
                 source: source,
-                imageUrl: url
+                imageUrl: url,
+                recommended: "no"
             });
         });
 
