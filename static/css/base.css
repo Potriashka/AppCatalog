@@ -266,7 +266,7 @@ dialog {
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
     border-radius: 100px;
-    background: rgb(111, 177, 117);
+    background: rgb(105, 173, 146);
     animation: cicle3 2s 1;
     opacity: 0;
 }
@@ -280,7 +280,7 @@ dialog {
     -webkit-border-radius: 150px;
     -moz-border-radius: 150px;
     border-radius: 150px;
-    background: rgb(98, 153, 116);
+    background: rgb(88, 142, 106);
     animation: cicle4 2s 1;
     opacity: 0;
 }
