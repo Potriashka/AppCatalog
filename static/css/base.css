@@ -309,10 +309,10 @@ dialog {
         width: 200px;
         height: 200px;
     }
-    80% {
+    65% {
         opacity: .65;
     }
-    90% {
+    80% {
         opacity: .8;
     }
 }
@@ -325,10 +325,10 @@ dialog {
         width: 400px;
         height: 400px;
     }
-    80% {
+    65% {
         opacity: .65;
     }
-    90% {
+    80% {
         opacity: .8;
     }
 }
@@ -344,10 +344,10 @@ dialog {
         width: 600px;
         height: 600px;
     }
-    80% {
+    65% {
         opacity: .65;
     }
-    90% {
+    80% {
         opacity: .8;
     }
 }
@@ -361,10 +361,10 @@ dialog {
         width: 200px;
         height: 200px;
     }
-    80% {
+    65% {
         opacity: .65;
     }
-    90% {
+    80% {
         opacity: .8;
     }
 }
@@ -378,10 +378,10 @@ dialog {
         width: 100%;
         height: 100%;
     }
-    90% {
+    80% {
         opacity: .8;
     }
-    80% {
+    65% {
         opacity: .55;
     }
 }
