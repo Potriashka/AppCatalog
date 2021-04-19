@@ -13,4 +13,21 @@ h4 {
 #icon {
     width: 8vw;
     height: 8vw;
+    animation: icon 5s 1;
+}
+
+@keyframes icon {
+    49% {
+        transform: rotate(1deg);
+        width: 8vw;
+        height: 8vw;
+    }
+    65% {
+        transform: rotate(0deg);
+    }
+    80% {
+        transform: rotate(-180deg);
+        width: 9vw;
+        height: 9vw;
+    }
 }
