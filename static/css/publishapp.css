@@ -79,3 +79,8 @@ ul {
     width: 8vw;
     height: 8vw;
 }
+
+#checkbox {
+    color: #3dd9a2;
+    border-radius: 20px;
+}

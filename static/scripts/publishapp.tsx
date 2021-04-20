@@ -49,6 +49,14 @@ async function publish() {
             });
         });
 
+    let checkbox = document.getElementById("checkbox");
+    if (checkbox.checked) {
+        var mail = document.createElement("a");
+        mail.href = "mailto:petrpotriashka2@gmail.com?subject=Verifying for " + appName + "&body=I%20" +
+            "would%20like%20my%20app%20to%20be%20verified";
+        mail.click();
+    }
+
     publishButton.innerHTML = "Publish";
     publishButton.style.display = "none";
     window.location.replace("/publisher/" + publisherName + "/" + appName);
