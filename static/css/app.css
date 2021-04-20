@@ -33,9 +33,9 @@ h4 {
 }
 
 #jjjust {
-    position: absolute;
+    position: relative;
     top: 2.5%;
-    left: 40%;
+    text-align: center;
     color: gold;
 }
 

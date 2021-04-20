@@ -28,7 +28,7 @@ firebase.database().ref("/user/").on("value", (snapshot) => {
             // pass
         }
         if (recommended == "yes") {
-            byDevs.innerText = `★ Recommended by Developers Team`;
+            byDevs.innerText = `★ Recommended by the Developers Team`;
         }
         if (verified == "yes") {
             tick.innerText = `✓`;
