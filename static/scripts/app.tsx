@@ -20,14 +20,18 @@ firebase.database().ref("/user/").on("value", (snapshot) => {
         document.getElementById("source").innerHTML += `<a href="${app["source"]}" class="b">${app["source"]}</a>`;
 
         let recommended = app["recommended"];
+        let verified = app["verified"]
         let byDevs = document.getElementById("jjjust");
+        let tick = document.getElementById("verif");
 
-        if (recommended == "no") {
+        if (recommended == "no" || verified == "no") {
             // pass
         }
         if (recommended == "yes") {
-            byDevs.innerText = `✭ Recommended by Developers Team`;
+            byDevs.innerText = `★ Recommended by Developers Team`;
         }
-
+        if (verified == "yes") {
+            tick.innerText = `✓`;
+        }
     }
 });
