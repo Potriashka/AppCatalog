@@ -5,3 +5,21 @@
 #publisherName {
     display: none;
 }
+
+.cross:hover {
+    border-radius: 37%;
+    background-color: rgba(74,74,74,0.68);
+    color: rgba(195,0,0,0.68)
+    animation: cross .5s 1;
+}
+
+@keyframes cross {
+    20% {
+        background-color: rgba(0,0,0,0.68);
+    }
+    99% {
+        background-color: rgba(74,74,74,0.68);
+        border-radius: 37%;
+        color: rgba(195,0,0,0.68)
+    }
+}
