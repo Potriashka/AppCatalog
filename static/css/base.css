@@ -170,6 +170,7 @@ dialog {
     width: 30vw;
     background-color: #232c33;
     animation: dialog .5s 1;
+    margin-bottom: 0;
 }
 
 .header {
