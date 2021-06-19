@@ -16,6 +16,8 @@ let account = document.getElementById("account");
 let buttonsFooter = document.getElementsByClassName("buttonsFooter");
 let accountFooter = document.getElementById("accountFooter");
 
+console.log(Date());
+
 let organizeButtons = () => {
     if (!checkCookie("username")) {
         buttons.style.display = "inline";
