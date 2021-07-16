@@ -1,14 +1,15 @@
-let publisherContainer = document.getElementById("publishers");
+let latestAppsContanier = document.getElementById("latestApps");
 
 firebase.database().ref("/").on("value", (snapshot) => {
     if (snapshot.val()) {
-        let publishers = "";
+        let latestApps = "";
         for (let username in snapshot.val()["user"]) {
             let publisherName = snapshot.val()["user"][username]["Name"]
-            publishers += `<a href="/publisher/${publisherName}" class="b">${publisherName}</a><br>`;
+            let latestAppsNames = snapshot.val()["user"][username]["apps"][["appName"]
+            latestApps += `<a href="/publisher/${publisherName}" class="b">${publisherName}</a><br>`;
         }
-        publisherContainer.innerHTML = publishers;
+        latestAppsContanier.innerHTML = latestApps;
     } else {
-        publisherContainer.innerHTML = "<h2>There are no publishers yet</h2>"
+        latestAppsContanier.innerHTML = "<h2>There are no publishers yet</h2>"
     }
 });
