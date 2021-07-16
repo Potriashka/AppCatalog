@@ -1,10 +1,16 @@
 {% extends "base.html" %}
 {% block title %}Home{% endblock %}
 {% block body %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
     <br>
     <center>
         <div class="container">
             <h1 class="text1">App Catalog</h1>
         </div>
     </center>
+    <div>
+        <h3 class="title">Latest:</h3>
+    </div>
+    <!-- script -->
+    <!-- {% block script %}<script src="{{url_for('static', filename='scripts/index.js')}}"></script>{% endblock %} -->
 {% endblock %}

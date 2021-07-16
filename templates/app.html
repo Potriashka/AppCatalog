@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block title %}{{ publisher }} on App Catalog{% endblock %}
 {% block body %}
-    <link rel="stylesheet" href="{{url_for('static', filename='css/app.css')}}"
+    <link rel="stylesheet" href="{{url_for('static', filename='css/app.css')}}">
     <center>
         <br>
         <p id="jjjust" ></p>
@@ -34,5 +34,5 @@
     <h4 class="screenshot">Screenshots</h4>
     <div id="publisherName">{{ publisher }}</div>
     <!-- script -->
-    <!-- {% block script %}<script src="{{url_for('static', filename='scripts/app.tsx')}}"></script>{% endblock %} -->
+    <!-- {% block script %}<script src="{{url_for('static', filename='scripts/app.js')}}"></script>{% endblock %} -->
 {% endblock %}
