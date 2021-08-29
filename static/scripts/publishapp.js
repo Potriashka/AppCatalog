@@ -45,7 +45,8 @@ async function publish() {
                 source: source,
                 imageUrl: url,
                 recommended: "no",
-                verified: "no"
+                verified: "no",
+                time: Date()
             });
         });
 
