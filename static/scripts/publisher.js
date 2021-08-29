@@ -1,4 +1,4 @@
-let found = false;
+let found_publisher = false;
 let name = document.getElementById("publisherName").innerText;
 let content = document.getElementById("contentDiv");
 let apps;
@@ -10,19 +10,19 @@ firebase.database().ref("/user/").on("value", (snapshot) => {
         if (val["Name"] == name) {
             apps = val["apps"];
             vers = val["verified"];
-            found = true;
+            found_publisher = true;
             break;
         }
     }
-    if (!found) {
+    if (!found_publisher) {
         alert("This publisher does not exist!");
     } else {
         for (const [key, val] of Object.entries(apps)) {
             if (vers) {
                 content.innerHTML += `<a href="/publisher/${name}/${val["appName"]}" class="b">${val["appName"]}</a><span class="text-muted">✓</span></span><br>`;
-            }
-            else {
+            } else {
                 content.innerHTML += `<a href="/publisher/${name}/${val["appName"]}" class="b">${val["appName"]}</a></span><br>`;
             }
         }
     }
+})
