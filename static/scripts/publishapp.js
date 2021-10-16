@@ -61,17 +61,7 @@ async function publish() {
 
     publishButton.innerHTML = "Publish";
     publishButton.style.display = "none";
-
-    function DisplayMenu(obj) {
-        var obj = document.getElementById(obj);
-        if (obj.style.visibility == 'visible') {
-            obj.style.visibility = 'hidden';
-        }
-        else {
-            obj.style.visibility = 'visible';
-        }
-    }
-
+    guidWindow.style.display = "block";
 }
 
 let otherButton = document.getElementById("other");

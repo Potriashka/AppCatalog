@@ -88,3 +88,16 @@ ul {
 #size {
     font-size: 15px;
 }
+
+#guidWindow {
+    background-color: #14171f;
+    position: fixed;
+    top: 35%;
+    left: 33%;
+    height: 25%;
+    width: 35%;
+}
+
+#guidWindow p {
+    font-size: 30px;
+}
