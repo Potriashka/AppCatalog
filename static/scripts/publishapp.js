@@ -60,7 +60,6 @@ async function publish() {
 
     publishButton.innerHTML = "Publish";
     publishButton.style.display = "none";
-    window.location.replace("/publisher/" + publisherName + "/" + appName);
 }
 
 let otherButton = document.getElementById("other");
