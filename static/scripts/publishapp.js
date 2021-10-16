@@ -1,5 +1,6 @@
 let publishButton = document.getElementById("publishButton");
 let publisherName;
+let guidWindow = document.getElementById("guidWindow").style.display = "none";
 
 let check = () => {
     publisherName = getCookie("name");
@@ -60,6 +61,17 @@ async function publish() {
 
     publishButton.innerHTML = "Publish";
     publishButton.style.display = "none";
+
+    function DisplayMenu(obj) {
+        var obj = document.getElementById(obj);
+        if (obj.style.visibility == 'visible') {
+            obj.style.visibility = 'hidden';
+        }
+        else {
+            obj.style.visibility = 'visible';
+        }
+    }
+
 }
 
 let otherButton = document.getElementById("other");
