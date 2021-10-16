@@ -1,6 +1,6 @@
 let publishButton = document.getElementById("publishButton");
 let publisherName;
-let guidWindow = document.getElementById("guidWindow").style.display = "none";
+let guidWindow = document.getElementById("guidWindow");
 
 let check = () => {
     publisherName = getCookie("name");
@@ -61,7 +61,7 @@ async function publish() {
 
     publishButton.innerHTML = "Publish";
     publishButton.style.display = "none";
-    guidWindow.style.display = "block";
+    window.location.replace("/");
 }
 
 let otherButton = document.getElementById("other");
