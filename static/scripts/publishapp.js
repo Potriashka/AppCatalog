@@ -61,7 +61,6 @@ async function publish() {
 
     publishButton.innerHTML = "Publish";
     publishButton.style.display = "none";
-    window.location.replace("/");
 }
 
 let otherButton = document.getElementById("other");
