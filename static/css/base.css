@@ -301,6 +301,15 @@ dialog {
     opacity: 0;
 }
 
+#checkboxText {
+    color: gray;
+    margin-left: 1%;
+}
+
+#chBDiv {
+    margin-bottom: 2%;
+}
+
 @keyframes cicle {
     0% {
         left: 45%;
