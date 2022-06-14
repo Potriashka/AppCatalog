@@ -5,7 +5,7 @@ firebase.database().ref("/").on("value", (snapshot) => {
         let latestApps = "";
         for (let username in snapshot.val()["user"]) {
             let publisherName = snapshot.val()["user"][username]["Name"]
-            let latestAppsNames = snapshot.val()["user"][username]["apps"][["appName"]
+            let latestAppsNames = snapshot.val()["user"][username]["apps"]["appName"]
             latestApps += `<a href="/publisher/${publisherName}" class="b">${publisherName}</a><br>`;
         }
         latestAppsContanier.innerHTML = latestApps;
