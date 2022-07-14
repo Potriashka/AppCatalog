@@ -4,9 +4,16 @@ firebase.database().ref("/").on("value", (snapshot) => {
     if (snapshot.val()) {
         let latestApps = "";
         for (let username in snapshot.val()["user"]) {
-            let publisherName = snapshot.val()["user"][username]["Name"]
-            let latestAppsNames = snapshot.val()["user"][username]["apps"]["appName"]
-            latestApps += `<a href="/publisher/${publisherName}" class="b">${publisherName}</a><br>`;
+            const publisherName = snapshot.val()["user"][username]["Name"]
+            const apps = snapshot.val()["user"][username]["apps"]
+            let latestAppNames = [];
+            for (const app in apps) {
+                latestAppNames.push(app);
+            }
+            latestApps += `<h4><a href="/publisher/${publisherName}" class="b">${publisherName}</a></h4>`;
+            for (const name of latestAppNames) {
+                latestApps += `<a href="/publisher/${publisherName}/${name}" class="b">${name}</a><br>`;
+            }
         }
         latestAppsContanier.innerHTML = latestApps;
     } else {
