@@ -1,10 +1,10 @@
-let name = document.getElementById("publisherName").innerText;
+let publisherName = document.getElementById("publisherName").innerText;
 let app;
 let found = false;
 
 firebase.database().ref("/user/").on("value", (snapshot) => {
-    for(const [key, val] of Object.entries(snapshot.val())) {
-        if (val["Name"] == name) {
+    for (const [, val] of Object.entries(snapshot.val())) {
+        if (val["Name"] == publisherName) {
             found = true;
             app = val["apps"][document.getElementById("nameOfApp").innerText];
             break;
@@ -16,8 +16,8 @@ firebase.database().ref("/user/").on("value", (snapshot) => {
         document.getElementById("icon").src = app["imageUrl"];
         document.getElementById("description").innerHTML += app["description"];
         document.getElementById("type").innerHTML += app["appType"];
-        document.getElementById("link").innerHTML += `<a href="https://${app["link"]}" class="b">${app["link"]}</a>`;
-        document.getElementById("source").innerHTML += `<a href="https://${app["source"]}" class="b">${app["source"]}</a>`;
+        document.getElementById("link").innerHTML += `<a href="${app["link"].startsWith("http") ? app["link"] : "https://" + app["link"]}" class="b">${app["link"]}</a>`;
+        document.getElementById("source").innerHTML += `<a href="${app["source"].startsWith("http") ? app["source"] : "https://" + app["source"]}" class="b">${app["source"]}</a>`;
 
         let recommended = app["recommended"];
         let verified = app["verified"]
